@@ -7,16 +7,12 @@
   const links = [
     {
       href: "series1",
-      name: "Series 1"
+      name: "Mixed Media"
     },
-    // {
-    //   href: "series2",
-    //   name: "Series 2"
-    // },
-    // {
-    //   href: "series3",
-    //   name: "Series 3"
-    // },
+    {
+      href: "series2",
+      name: "Acrylic"
+    },
     {
       href: "about",
       name: "About"
@@ -28,13 +24,22 @@
 </script>
 
 <style>
+  body {
+    font-family: futura;
+  }
   header {
-    background-color: lightblue;
-    height: 50px;
+    background-color: white;
+    height: 5vh;
     padding: 0 15px;
+    /* font-family: futura; */
+    font-size: 1.2rem;
+    /* border-bottom: 1px solid grey; */
   }
   main {
-    padding: 15px;
+    /* padding: 15px; */
+    max-width: 1024px;
+    margin: 0 auto;
+    background: transparent;
   }
   .v-menu {
     background-color: lightblue;
@@ -54,19 +59,32 @@
   :global(.svelte-fluid-header--button:hover) {
     color: black;
   }
+  .bg {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;
+    opacity: 0.33;
+    background-image: url("/img/family.jpg");
+    background-size: cover;
+    background-blend-mode: saturation;
+  }
 </style>
 
 <header>
   <Fluid>
-    <div slot="left">John Hong Studio</div>
+    <div slot="left">
+      <a href="/">John Hong Studio</a>
+    </div>
     <nav class="h-menu" slot="right">
       {#each links as { href, name }}
         <a {href}>{name}</a>
       {/each}
     </nav>
     <nav class="v-menu" slot="drawer">
-      {#each links as link}
-        <a href="javascript:void(0)">{link}</a>
+      {#each links as { href, name }}
+        <a {href}>{name}</a>
       {/each}
     </nav>
   </Fluid>
@@ -74,3 +92,5 @@
 <main>
   <slot />
 </main>
+
+<div class="bg" />
