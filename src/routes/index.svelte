@@ -25,7 +25,7 @@
   <title>John Hong Studio</title>
 </svelte:head>
 
-<section class="py-4">
+<section class="py-4 px-2">
   <SeriesCover title="new work" href="/new-work" src="img/graffiti-1.jpg" />
   <SeriesCover
     title="work on paper"

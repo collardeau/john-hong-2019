@@ -17,5 +17,7 @@
   <title>Work on Paper</title>
 </svelte:head>
 
-<h3 class="text-white p-4 capitalize">work on paper</h3>
-<Feed {posts} />
+<section class="max-w-lg m-auto">
+  <h3 class="text-white p-4 capitalize">work on paper</h3>
+  <Feed {posts} />
+</section>

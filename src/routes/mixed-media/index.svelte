@@ -17,7 +17,7 @@
   <title>Series 1</title>
 </svelte:head>
 
-<section class="">
+<section class="max-w-lg m-auto">
   <h3 class="text-white p-4">Mixed Media series</h3>
   <Feed {posts} />
 </section>
