@@ -8,7 +8,7 @@
 <style>
   .bg {
     background-color: hsla(0, 0%, 0%, 0.5);
-    color: fff;
+    color: #fff;
   }
 </style>
 
