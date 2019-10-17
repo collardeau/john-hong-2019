@@ -4,17 +4,19 @@
 
 <style>
   section {
-    height: calc(93vh - 1rem);
     display: grid;
     grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(4, 40%);
+    grid-template-rows: repeat(4, 40vh);
     grid-gap: 1rem;
+    height: auto;
   }
 
   @media (min-width: 640px) {
     section {
       grid-template-columns: repeat(2, 50%);
       grid-template-rows: repeat(2, 50%);
+      grid-gap: 1rem;
+      height: calc(93vh - 1rem);
     }
   }
 </style>
