@@ -14,6 +14,15 @@
       name: "Acrylic"
     },
     {
+      href: "series2",
+      name: "Dancers"
+    },
+    {
+      href: "series2",
+      name: "Graffiti"
+    },
+
+    {
       href: "about",
       name: "About"
     }
@@ -24,7 +33,7 @@
 </script>
 
 <style>
-  body {
+  :global(body) {
     font-family: futura;
   }
   header {
@@ -47,10 +56,10 @@
   }
   .v-menu a {
     display: block;
-    padding-bottom: 15px;
+    padding-bottom: 1rem;
   }
   .h-menu a {
-    padding-right: 15px;
+    padding-right: 2rem;
   }
 
   :global(.svelte-fluid-header--button) {
@@ -59,7 +68,7 @@
   :global(.svelte-fluid-header--button:hover) {
     color: black;
   }
-  .bg {
+  /* .bg {
     position: absolute;
     top: 0;
     height: 100vh;
@@ -69,13 +78,13 @@
     background-image: url("/img/family.jpg");
     background-size: cover;
     background-blend-mode: saturation;
-  }
+  } */
 </style>
 
-<header>
+<header class="shadw">
   <Fluid>
     <div slot="left">
-      <a href="/">John Hong Studio</a>
+      <a href="/" class="uppercase font-semibold">John Hong Studio</a>
     </div>
     <nav class="h-menu" slot="right">
       {#each links as { href, name }}
