@@ -5,10 +5,18 @@
 <style>
   section {
     height: 95vh;
+    height: calc(95vh - 1rem);
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
-    padding: 0 0 50px 0;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(4, 40%);
+    grid-gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    section {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(2, 50%);
+    }
   }
 </style>
 
@@ -16,7 +24,7 @@
   <title>John Hong Studio</title>
 </svelte:head>
 
-<section>
+<section class="py-4">
   <SeriesCover title="mixed media" href="/series1" src="img/empress.jpg" />
   <SeriesCover
     title="work on paper"

@@ -12,7 +12,7 @@
   }
 </style>
 
-<div class="p-2">
+<div>
   <a {href}>
     <div class="relative h-full">
       <img {src} {alt} class="object-cover w-full h-full" />
