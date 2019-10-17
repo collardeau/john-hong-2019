@@ -4,8 +4,7 @@
 
 <style>
   section {
-    height: 95vh;
-    height: calc(95vh - 1rem);
+    height: calc(93vh - 1rem);
     display: grid;
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, 40%);

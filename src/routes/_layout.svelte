@@ -32,18 +32,19 @@
 <style>
   :global(body) {
     font-family: futura;
-    /* background-color: #1a202c; */
-    background-color: #2d3748;
+    background-color: #1a202c;
+    /* background-color: #2d3748; */
     /* background-color: #4a5568; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #1a202c;
   }
+
   header {
-    height: 5vh;
+    height: 7vh;
   }
   .v-menu {
-    background-color: lightblue;
+    background-color: white;
     padding: 1rem;
   }
   .v-menu a {
@@ -62,7 +63,7 @@
   }
 </style>
 
-<header class="px-4 bg-white">
+<header class="px-6 bg-gray-800 text-white">
   <Fluid>
     <div slot="left">
       <a href="/" class="uppercase font-semibold">John Hong Studio</a>
