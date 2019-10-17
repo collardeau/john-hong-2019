@@ -2,13 +2,13 @@
   export let title = "series";
   export let src = "";
   export let href = "#";
-  export let alt = "category headline image";
+  export let alt = "cover image";
 </script>
 
 <style>
-  .series-info {
+  .bg {
     background-color: hsla(0, 0%, 0%, 0.5);
-    color: #fff;
+    color: fff;
   }
 </style>
 
@@ -17,8 +17,8 @@
     <div class="relative h-full">
       <img {src} {alt} class="object-cover w-full h-full" />
       <div
-        class="series-info absolute w-full bottom-0 flex-col justify-center
-        text-center py-4 capitalize text-lg">
+        class="bg absolute w-full bottom-0 flex-col justify-center text-center
+        py-4 capitalize text-xl">
         {title}
       </div>
     </div>

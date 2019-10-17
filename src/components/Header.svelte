@@ -3,20 +3,21 @@
   let isOpen = false;
   const links = [
     {
-      href: "series1",
-      name: "Mixed Media"
+      href: "series2",
+      name: "New Work"
     },
     {
       href: "series2",
       name: "Work on Paper"
     },
     {
-      href: "series2",
-      name: "Miscelleneous"
+      href: "series1",
+      name: "Mixed Media"
     },
+
     {
       href: "series2",
-      name: "New Work"
+      name: "Miscelleneous"
     },
 
     {
