@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`series1.json`)
+    return this.fetch(`mixed-media.json`)
       .then(r => r.json())
       .then(posts => {
         return { posts };

@@ -26,11 +26,14 @@
 </svelte:head>
 
 <section class="py-4">
-  <SeriesCover title="new work" href="/series1" src="img/graffiti-1.jpg" />
+  <SeriesCover title="new work" href="/new-work" src="img/graffiti-1.jpg" />
   <SeriesCover
     title="work on paper"
-    href="/series2"
+    href="/work-on-paper"
     src="img/the-light-for-grace.jpg" />
-  <SeriesCover title="mixed media" href="/series1" src="img/empress.jpg" />
-  <SeriesCover title="miscellaneous" href="/series1" src="img/dance-5.jpg" />
+  <SeriesCover title="mixed media" href="/mixed-media" src="img/empress.jpg" />
+  <SeriesCover
+    title="miscellaneous"
+    href="/miscellaneous"
+    src="img/dance-5.jpg" />
 </section>

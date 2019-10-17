@@ -3,10 +3,10 @@
 </script>
 
 {#each posts as { img, title }}
-  <article class="mb-6">
+  <article class="mb-6 px-2">
     <img class="w-full" src={img} alt={title} />
     <section class="bg-gray-300 p-4 flex justify-between">
-      <h5 class="uppercase">{title}</h5>
+      <h5 class="uppercase font-medium">{title}</h5>
       <div>
         <button type="button" class="w-4 h-4">
           <svg

@@ -42,7 +42,7 @@ const posts = [
     width: 22,
     materials: "synthetic polymer on paper",
     img: "img/the-light-for-grace.jpg",
-    group: "acrylic"
+    group: "paper"
   },
   {
     title: "Sadie",
@@ -51,7 +51,25 @@ const posts = [
     width: 24,
     materials: "synthetic polymer on paper. diptych",
     img: "img/sadie.jpg",
-    group: "acrylic"
+    group: "paper"
+  },
+  {
+    title: "Dance 5",
+    slug: "dance-5",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "img/dance-5.jpg",
+    group: "misc"
+  },
+  {
+    title: "Untitled 5",
+    slug: "untitled-5",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "img/graffiti-1.jpg",
+    group: "recent"
   }
 ];
 

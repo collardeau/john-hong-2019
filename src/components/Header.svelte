@@ -3,20 +3,20 @@
   let isOpen = false;
   const links = [
     {
-      href: "series2",
+      href: "new-work",
       name: "New Work"
     },
     {
-      href: "series2",
+      href: "work-on-paper",
       name: "Work on Paper"
     },
     {
-      href: "series1",
+      href: "mixed-media",
       name: "Mixed Media"
     },
 
     {
-      href: "series2",
+      href: "miscellaneous",
       name: "Miscelleneous"
     },
 
@@ -39,7 +39,7 @@
 
 <!-- mobile -->
 <header
-  class="relative sm:hidden w-100 px-4 bg-gray-800 text-white items-center">
+  class="relative md:hidden w-100 px-4 bg-gray-800 text-white items-center">
   <div class="flex justify-between items-center h-full">
     <div>
       <a href="/" class="uppercase font-semibold">John Hong Studio</a>
@@ -76,7 +76,7 @@
 
 <!-- desktop -->
 <header
-  class="hidden sm:flex justify-between px-6 bg-gray-800 text-white items-center">
+  class="hidden md:flex justify-between px-6 bg-gray-800 text-white items-center">
   <div>
     <a href="/" class="uppercase font-semibold">John Hong Studio</a>
   </div>

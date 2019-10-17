@@ -1,6 +1,6 @@
-import posts from "./_posts.js";
+import posts from "../../data";
 
-const contents = JSON.stringify(posts);
+const contents = JSON.stringify(posts.filter(p => p.group === "paper"));
 
 export function get(req, res) {
   res.writeHead(200, {
