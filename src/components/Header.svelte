@@ -42,7 +42,9 @@
   class="relative md:hidden w-100 px-4 bg-gray-800 text-white items-center">
   <div class="flex justify-between items-center h-full">
     <div>
-      <a href="/" class="uppercase font-semibold">John Hong Studio</a>
+      <a href="/" class="uppercase font-semibold tracking-wider">
+        John Hong Studio
+      </a>
     </div>
     <button type="button" class="block w-6 h-6" on:click={handleClick}>
       <svg

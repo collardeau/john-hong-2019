@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-  <title>Series 1</title>
+  <title>Mixed Media</title>
 </svelte:head>
 
 <section class="max-w-lg m-auto">
