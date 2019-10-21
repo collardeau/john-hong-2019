@@ -41,7 +41,11 @@ const postcssPlugins = (purgecss = false) => {
           }
         ],
         // Whitelist selectors to stop Purgecss from removing them from your CSS.
-        whitelist: []
+        whitelist: [
+          "focus:outline-none",
+          "focus:shadow-outline",
+          "active:bg-gray-900"
+        ]
       }),
     !dev && require("cssnano")
   ].filter(Boolean);
