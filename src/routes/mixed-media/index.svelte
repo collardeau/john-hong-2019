@@ -20,7 +20,7 @@
 
 <Wrapper>
   <section class="max-w-lg m-auto">
-    <h3 class="text-white p-4">Mixed Media series</h3>
+    <h3 class="text-white p-4">Series: Mixed Media</h3>
     <Feed {posts} />
   </section>
 </Wrapper>

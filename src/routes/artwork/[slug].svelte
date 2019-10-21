@@ -26,42 +26,47 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="px-2">
-    <h3 class="py-2 pl-2 text-white uppercase">{post.title}</h3>
-    <img class="w-full" src={post.img} alt={post.title} />
-    <p class="text-white py-4">mixed media on canvas</p>
-  </section>
-
-  <section
-    class="text-gray-200 bg-gray-800 py-2 fixed bottom-0 left-0 w-full flex
-    justify-around">
-    <div class="h-10 w-10">
-      <a
-        href="/artwork/{prev}"
-        class="block p-2 text-gray-400 hover:text-white {outline}">
-        <svg
-          class="fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20">
-          <path
-            d="M0 10a10 10 0 1 1 20 0 10 10 0 0 1-20 0zm2 0a8 8 0 1 0 16 0 8 8 0
-            0 0-16 0zm8-2h5v4h-5v3l-5-5 5-5v3z" />
-        </svg>
-      </a>
-    </div>
-    <div class="h-10 w-10">
-      <a
-        href="/artwork/{next}"
-        class="block p-2 text-gray-400 hover:text-white {outline}">
-        <svg
-          class="fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20">
-          <path
-            d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8
-            0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z" />
-        </svg>
-      </a>
+  <section class="px-2 mt-6 pb-20 text-center">
+    <img class="w-full pb-1" src={post.img} alt={post.title} />
+    <div class="pt-2">
+      <h3 class="py-2 text-white uppercase text-lg font-medium">
+        {post.title}
+      </h3>
+      <p class="text-white capitalize text-sm">mixed media on canvas</p>
+      <p class="text-white text-sm">24 x 24 inches</p>
     </div>
   </section>
 </Wrapper>
+
+<section
+  class="text-gray-200 bg-gray-800 py-2 fixed bottom-0 left-0 w-full flex
+  justify-around">
+  <div class="h-10 w-10">
+    <a
+      href="/artwork/{prev}"
+      class="block p-2 text-gray-400 hover:text-white {outline}">
+      <svg
+        class="fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20">
+        <path
+          d="M0 10a10 10 0 1 1 20 0 10 10 0 0 1-20 0zm2 0a8 8 0 1 0 16 0 8 8 0 0
+          0-16 0zm8-2h5v4h-5v3l-5-5 5-5v3z" />
+      </svg>
+    </a>
+  </div>
+  <div class="h-10 w-10">
+    <a
+      href="/artwork/{next}"
+      class="block p-2 text-gray-400 hover:text-white {outline}">
+      <svg
+        class="fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20">
+        <path
+          d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0
+          0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z" />
+      </svg>
+    </a>
+  </div>
+</section>

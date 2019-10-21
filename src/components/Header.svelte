@@ -37,7 +37,7 @@
   };
 
   const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
-  const header = "uppercase font-semibold tracking-wider";
+  const header = "uppercase font-medium tracking-wider";
   const title = "john hong studio";
 </script>
 
