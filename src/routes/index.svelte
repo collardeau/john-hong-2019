@@ -1,4 +1,5 @@
 <script>
+  import Wrapper from "../components/TransitionWrapper.svelte";
   import SeriesCover from "../components/SeriesCover.svelte";
 </script>
 
@@ -25,15 +26,20 @@
   <title>John Hong Studio</title>
 </svelte:head>
 
-<section class="py-4 px-2">
-  <SeriesCover title="new work" href="/new-work" src="img/graffiti-1.jpg" />
-  <SeriesCover
-    title="work on paper"
-    href="/work-on-paper"
-    src="img/the-light-for-grace.jpg" />
-  <SeriesCover title="mixed media" href="/mixed-media" src="img/empress.jpg" />
-  <SeriesCover
-    title="miscellaneous"
-    href="/miscellaneous"
-    src="img/dance-5.jpg" />
-</section>
+<Wrapper>
+  <section class="py-4 px-2 absolute">
+    <SeriesCover title="new work" href="/new-work" src="img/graffiti-1.jpg" />
+    <SeriesCover
+      title="work on paper"
+      href="/work-on-paper"
+      src="img/the-light-for-grace.jpg" />
+    <SeriesCover
+      title="mixed media"
+      href="/mixed-media"
+      src="img/empress.jpg" />
+    <SeriesCover
+      title="miscellaneous"
+      href="/miscellaneous"
+      src="img/dance-5.jpg" />
+  </section>
+</Wrapper>

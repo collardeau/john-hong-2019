@@ -9,6 +9,7 @@
 </script>
 
 <script>
+  import Wrapper from "../../components/TransitionWrapper.svelte";
   import Feed from "../../components/Feed.svelte";
   export let posts;
 </script>
@@ -17,7 +18,9 @@
   <title>Mixed Media</title>
 </svelte:head>
 
-<section class="max-w-lg m-auto">
-  <h3 class="text-white p-4">Mixed Media series</h3>
-  <Feed {posts} />
-</section>
+<Wrapper>
+  <section class="max-w-lg m-auto">
+    <h3 class="text-white p-4">Mixed Media series</h3>
+    <Feed {posts} />
+  </section>
+</Wrapper>
