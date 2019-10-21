@@ -1,11 +1,13 @@
 import posts from "../../data.js";
 
 const lookup = new Map();
-posts.forEach(post => {
-  lookup.set(post.slug, JSON.stringify(post));
+posts.forEach((post, i) => {
+  const prev = posts[i - 1] ? posts[i - 1].slug : posts[posts.length - 1].slug;
+  const next = posts[i + 1] ? posts[i + 1].slug : posts[0].slug;
+  lookup.set(post.slug, JSON.stringify({ post, prev, next }));
 });
 
-export function get(req, res, next) {
+export function get(req, res) {
   const { slug } = req.params;
 
   if (lookup.has(slug)) {

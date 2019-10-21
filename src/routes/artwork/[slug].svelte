@@ -2,9 +2,8 @@
   export async function preload({ params, query }) {
     const res = await this.fetch(`artwork/${params.slug}.json`);
     const data = await res.json();
-
     if (res.status === 200) {
-      return { post: data };
+      return { data };
     } else {
       this.error(res.status, data.message);
     }
@@ -12,7 +11,12 @@
 </script>
 
 <script>
-  export let post;
+  import { slide } from "svelte/transition";
+
+  export let data;
+  $: post = data.post;
+  $: prev = data.prev;
+  $: next = data.next;
 </script>
 
 <svelte:head>
@@ -29,7 +33,7 @@
   class="text-gray-200 bg-gray-800 p-4 fixed bottom-0 left-0 w-full flex
   justify-around">
   <div class="h-6 w-6">
-    <a href="/artwork/foo">
+    <a href="/artwork/{prev}">
       <svg
         class="fill-current"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +45,7 @@
     </a>
   </div>
   <div class="h-6 w-6">
-    <a href="/artwork/foo">
+    <a href="/artwork/{next}">
       <svg
         class="fill-current"
         xmlns="http://www.w3.org/2000/svg"
