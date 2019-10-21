@@ -17,6 +17,8 @@
   $: post = data.post;
   $: prev = data.prev;
   $: next = data.next;
+
+  const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
 </script>
 
 <svelte:head>
@@ -31,10 +33,12 @@
   </section>
 
   <section
-    class="text-gray-200 bg-gray-800 p-4 fixed bottom-0 left-0 w-full flex
+    class="text-gray-200 bg-gray-800 py-2 fixed bottom-0 left-0 w-full flex
     justify-around">
-    <div class="h-6 w-6">
-      <a href="/artwork/{prev}">
+    <div class="h-10 w-10">
+      <a
+        href="/artwork/{prev}"
+        class="block p-2 text-gray-400 hover:text-white {outline}">
         <svg
           class="fill-current"
           xmlns="http://www.w3.org/2000/svg"
@@ -45,8 +49,10 @@
         </svg>
       </a>
     </div>
-    <div class="h-6 w-6">
-      <a href="/artwork/{next}">
+    <div class="h-10 w-10">
+      <a
+        href="/artwork/{next}"
+        class="block p-2 text-gray-400 hover:text-white {outline}">
         <svg
           class="fill-current"
           xmlns="http://www.w3.org/2000/svg"

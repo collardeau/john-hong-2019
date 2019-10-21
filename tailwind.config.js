@@ -1,5 +1,7 @@
 module.exports = {
-    theme: {},
-    variants: {},
-    plugins: [],
-  }
+  theme: {},
+  variants: {
+    backgroundColor: ["hover", "focus", "active"]
+  },
+  plugins: []
+};

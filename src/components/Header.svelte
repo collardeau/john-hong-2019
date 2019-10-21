@@ -1,5 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
+  export let segment;
+
   let isOpen = false;
   const links = [
     {
@@ -29,6 +31,14 @@
   const handleClick = () => {
     isOpen = !isOpen;
   };
+
+  const onClick = () => {
+    // isOpen = false;
+  };
+
+  const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
+  const header = "uppercase font-semibold tracking-wider";
+  const title = "john hong studio";
 </script>
 
 <style>
@@ -39,14 +49,19 @@
 
 <!-- mobile -->
 <header
-  class="relative md:hidden w-100 px-4 bg-gray-800 text-white items-center">
+  class="relative md:hidden pl-2 pr-2 bg-gray-800 text-white items-center">
   <div class="flex justify-between items-center h-full">
-    <div>
-      <a href="/" class="uppercase font-semibold tracking-wider">
-        John Hong Studio
-      </a>
-    </div>
-    <button type="button" class="block w-6 h-6" on:click={handleClick}>
+    <h1 class={header}>
+      {#if segment}
+        <a href="/" class="p-2 {outline}">{title}</a>
+      {:else}
+        <span class="pl-2">{title}</span>
+      {/if}
+    </h1>
+    <button
+      type="button"
+      class="block w-8 h-8 p-2 text-gray-400 hover:text-white {outline}"
+      on:click={handleClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -64,12 +79,19 @@
   </div>
   {#if isOpen}
     <nav
-      transition:slide={{ duration: 200 }}
-      class="absolute right-0 w-full z-10 bg-gray-800 p-2 px-4">
+      transition:slide={{ duration: 300 }}
+      class="px-2 pb-4 absolute right-0 w-full z-10 bg-gray-800">
       {#each links as { href, name }}
-        <div class="pb-4">
-          <a {href}>{name}</a>
-        </div>
+        {#if segment === href}
+          <span class="block p-2 mb-2 text-gray-600">{name}</span>
+        {:else}
+          <a
+            on:click={onClick}
+            class="block p-2 mb-2 hover:bg-gray-700 rounded {outline}"
+            {href}>
+            {name}
+          </a>
+        {/if}
       {/each}
     </nav>
   {/if}
@@ -78,13 +100,23 @@
 
 <!-- desktop -->
 <header
-  class="hidden md:flex justify-between px-6 bg-gray-800 text-white items-center">
-  <div>
-    <a href="/" class="uppercase font-semibold">John Hong Studio</a>
-  </div>
+  class="hidden md:flex justify-between px-4 bg-gray-800 text-white items-center">
+  <h1 class={header}>
+    {#if segment}
+      <a href="/" class={outline}>{title}</a>
+    {:else}
+      <span>{title}</span>
+    {/if}
+  </h1>
   <nav>
     {#each links as { href, name }}
-      <a {href} class="pl-4 ml-2">{name}</a>
+      {#if segment === href}
+        <span class="p-2 ml-2 text-gray-600">{name}</span>
+      {:else}
+        <a {href} class="p-2 ml-2 hover:bg-gray-700 rounded {outline}">
+          {name}
+        </a>
+      {/if}
     {/each}
   </nav>
 </header>
