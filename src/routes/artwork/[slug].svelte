@@ -43,6 +43,7 @@
   justify-around">
   <div class="h-10 w-10">
     <a
+      rel="prefetch"
       href="/artwork/{prev}"
       class="block p-2 text-gray-400 hover:text-white {outline}">
       <svg
@@ -57,6 +58,7 @@
   </div>
   <div class="h-10 w-10">
     <a
+      rel="prefetch"
       href="/artwork/{next}"
       class="block p-2 text-gray-400 hover:text-white {outline}">
       <svg

@@ -10,6 +10,7 @@
       <h5 class="uppercase font-medium tracking-wide font-medium ">{title}</h5>
       <div>
         <a
+          rel="prefetch"
           href="artwork/{slug}"
           class="text-gray-700 hover:text-gray-900 block w-8 h-8 p-1 {outline}">
           <svg
