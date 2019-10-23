@@ -12,6 +12,7 @@
 
 <script>
   import Wrapper from "../../components/TransitionWrapper.svelte";
+  import { cloudinaryBase } from "../../config";
 
   export let data;
   $: post = data.post;
@@ -27,7 +28,10 @@
 
 <Wrapper>
   <section class="px-2 mt-6 pb-20 text-center">
-    <img class="w-full pb-1" src={post.img} alt={post.title} />
+    <img
+      class="w-full pb-1"
+      src="{cloudinaryBase}{post.img}"
+      alt={post.title} />
     <div class="pt-2">
       <h3 class="py-2 text-white uppercase text-lg font-medium">
         {post.title}
