@@ -2,13 +2,14 @@
   import Wrapper from "../components/TransitionWrapper.svelte";
   import SeriesCover from "../components/SeriesCover.svelte";
   import { cloudinaryBase } from "../config";
+  let w;
 </script>
 
 <style>
   div {
     display: grid;
     grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(4, 35vh);
+    grid-template-rows: repeat(4, 37vh);
     grid-gap: 1.5rem;
     height: auto;
   }
@@ -28,25 +29,25 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="px-2 mb-8 absolute">
+  <section class="px-2 mb-8 absolute w-full">
     <h3 class="text-white px-2 py-4 capitalize">View Series</h3>
-    <div>
+    <div class="w-full" bind:clientWidth={w}>
       <SeriesCover
         title="new work"
         href="/new-work"
-        src="{cloudinaryBase}img/graffiti-1.jpg" />
+        src="{cloudinaryBase({ w })}img/graffiti-1.jpg" />
       <SeriesCover
         title="work on paper"
         href="/work-on-paper"
-        src="{cloudinaryBase}img/the-light-for-grace.jpg" />
+        src="{cloudinaryBase({ w })}img/the-light-for-grace.jpg" />
       <SeriesCover
         title="mixed media"
         href="/mixed-media"
-        src="{cloudinaryBase}img/empress.jpg" />
+        src="{cloudinaryBase({ w })}img/empress.jpg" />
       <SeriesCover
         title="miscellaneous"
         href="/miscellaneous"
-        src="{cloudinaryBase}img/dance-5.jpg" />
+        src="{cloudinaryBase({ w })}img/dance-5.jpg" />
     </div>
   </section>
 </Wrapper>

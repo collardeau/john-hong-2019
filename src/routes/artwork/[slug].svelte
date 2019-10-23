@@ -20,6 +20,7 @@
   $: next = data.next;
 
   const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
+  let w;
 </script>
 
 <svelte:head>
@@ -27,11 +28,10 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="px-2 mt-6 pb-20 text-center">
-    <img
-      class="w-full pb-1"
-      src="{cloudinaryBase}{post.img}"
-      alt={post.title} />
+  <section class="px-2 mt-6 pb-20 text-center w-full">
+    <div bind:clientWidth={w}>
+      <img class="" src="{cloudinaryBase({ w })}{post.img}" alt={post.title} />
+    </div>
     <div class="pt-2">
       <h3 class="py-2 text-white uppercase text-lg font-medium">
         {post.title}
