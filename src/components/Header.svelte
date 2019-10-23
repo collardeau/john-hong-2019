@@ -79,7 +79,6 @@
     <nav
       transition:slide={{ duration: 300 }}
       class="px-2 pb-4 absolute right-0 w-full z-10 bg-gray-800">
-      <!-- hidden link for static export -->
       <a href="artwork" class="hidden">Artwork</a>
       {#each links as { href, name }}
         {#if segment === href}
@@ -108,16 +107,17 @@
       <span>{title}</span>
     {/if}
   </h1>
-  <nav />
+  <nav>
+    <!-- hidden link for static export -->
+    <a href="artwork" class="hidden">artwork</a>
+    {#each links as { href, name }}
+      {#if segment === href}
+        <span class="p-2 ml-2 text-gray-600">{name}</span>
+      {:else}
+        <a {href} class="p-2 ml-2 hover:bg-gray-700 rounded {outline}">
+          {name}
+        </a>
+      {/if}
+    {/each}
+  </nav>
 </header>
-<nav>
-  <!-- hidden link for static export -->
-  <a href="artwork" class="hidden">Artwork</a>
-  {#each links as { href, name }}
-    {#if segment === href}
-      <span class="p-2 ml-2 text-gray-600">{name}</span>
-    {:else}
-      <a {href} class="p-2 ml-2 hover:bg-gray-700 rounded {outline}">{name}</a>
-    {/if}
-  {/each}
-</nav>
