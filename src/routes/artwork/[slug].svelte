@@ -11,13 +11,17 @@
 </script>
 
 <script>
+  import { fade } from "svelte/transition";
   import Wrapper from "../../components/TransitionWrapper.svelte";
   import { cloudinaryBase } from "../../config";
-
   export let data;
+  let show = false;
   $: post = data.post;
   $: prev = data.prev;
   $: next = data.next;
+  $: show = !!data.post;
+
+  const onClick = () => (show = false);
 
   const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
   let w;
@@ -28,20 +32,28 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="px-2 mt-6 pb-20 text-center w-full">
-    <div bind:clientWidth={w}>
-      <img class="" src="{cloudinaryBase({ w })}{post.img}" alt={post.title} />
-    </div>
-    <div class="pt-2">
-      <h3 class="py-2 text-white uppercase text-lg font-medium">
-        {post.title}
-      </h3>
-      <p class="text-white capitalize text-sm">{post.materials}</p>
-      <p class="text-white text-sm">
-        {post.width} x {post.height} inches{post.each ? ' each' : ''}
-      </p>
-    </div>
-  </section>
+  {#if show}
+    <section
+      class="px-2 mt-4 pb-20 text-center w-full"
+      in:fade={{ duration: 400, delay: 100 }}
+      out:fade={{ duration: 100 }}>
+      <div bind:clientWidth={w}>
+        <img
+          class=""
+          src="{cloudinaryBase({ w })}{post.img}"
+          alt={post.title} />
+      </div>
+      <div class="pt-2">
+        <h3 class="py-2 text-white uppercase text-lg font-medium">
+          {post.title}
+        </h3>
+        <p class="text-white capitalize text-sm">{post.materials}</p>
+        <p class="text-white text-sm">
+          {post.width} x {post.height} inches{post.each ? ' each' : ''}
+        </p>
+      </div>
+    </section>
+  {/if}
 </Wrapper>
 
 <section
@@ -49,6 +61,7 @@
   justify-around">
   <div class="h-10 w-10">
     <a
+      on:click={onClick}
       rel="prefetch"
       href="/artwork/{prev}"
       class="block p-2 text-gray-400 hover:text-white {outline}">
@@ -64,6 +77,7 @@
   </div>
   <div class="h-10 w-10">
     <a
+      on:click={onClick}
       rel="prefetch"
       href="/artwork/{next}"
       class="block p-2 text-gray-400 hover:text-white {outline}">
