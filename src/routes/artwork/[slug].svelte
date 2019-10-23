@@ -36,8 +36,10 @@
       <h3 class="py-2 text-white uppercase text-lg font-medium">
         {post.title}
       </h3>
-      <p class="text-white capitalize text-sm">mixed media on canvas</p>
-      <p class="text-white text-sm">24 x 24 inches</p>
+      <p class="text-white capitalize text-sm">{post.materials}</p>
+      <p class="text-white text-sm">
+        {post.width} x {post.height} inches{post.each ? ' each' : ''}
+      </p>
     </div>
   </section>
 </Wrapper>
