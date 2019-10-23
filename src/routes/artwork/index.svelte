@@ -18,9 +18,7 @@
   <title>Artwork</title>
 </svelte:head>
 
-<Wrapper>
-  <section class="max-w-lg m-auto">
-    <h3 class="text-white p-4">Mixed Media series</h3>
-    <Feed {posts} />
-  </section>
-</Wrapper>
+<section class="max-w-lg m-auto">
+  <h3 class="text-white p-4">Artwork</h3>
+  <Feed {posts} />
+</section>

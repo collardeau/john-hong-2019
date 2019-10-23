@@ -21,7 +21,6 @@
       href: "miscellaneous",
       name: "Miscelleneous"
     },
-
     {
       href: "about",
       name: "About"
@@ -37,7 +36,6 @@
   };
 
   const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
-  const header = "uppercase font-medium tracking-wider";
   const title = "john hong studio";
 </script>
 
@@ -51,7 +49,7 @@
 <header
   class="relative md:hidden pl-2 pr-2 bg-gray-800 text-white items-center">
   <div class="flex justify-between items-center h-full">
-    <h1 class={header}>
+    <h1 class="uppercase font-medium tracking-wider">
       {#if segment}
         <a href="/" class="p-2 {outline}">{title}</a>
       {:else}
@@ -81,6 +79,8 @@
     <nav
       transition:slide={{ duration: 300 }}
       class="px-2 pb-4 absolute right-0 w-full z-10 bg-gray-800">
+      <!-- hidden link for static export -->
+      <a href="artwork" class="hidden">Artwork</a>
       {#each links as { href, name }}
         {#if segment === href}
           <span class="block p-2 mb-2 text-gray-600">{name}</span>
@@ -101,22 +101,23 @@
 <!-- desktop -->
 <header
   class="hidden md:flex justify-between px-4 bg-gray-800 text-white items-center">
-  <h1 class={header}>
+  <h1 class="uppercase font-medium tracking-wider">
     {#if segment}
       <a href="/" class={outline}>{title}</a>
     {:else}
       <span>{title}</span>
     {/if}
   </h1>
-  <nav>
-    {#each links as { href, name }}
-      {#if segment === href}
-        <span class="p-2 ml-2 text-gray-600">{name}</span>
-      {:else}
-        <a {href} class="p-2 ml-2 hover:bg-gray-700 rounded {outline}">
-          {name}
-        </a>
-      {/if}
-    {/each}
-  </nav>
+  <nav />
 </header>
+<nav>
+  <!-- hidden link for static export -->
+  <a href="artwork" class="hidden">Artwork</a>
+  {#each links as { href, name }}
+    {#if segment === href}
+      <span class="p-2 ml-2 text-gray-600">{name}</span>
+    {:else}
+      <a {href} class="p-2 ml-2 hover:bg-gray-700 rounded {outline}">{name}</a>
+    {/if}
+  {/each}
+</nav>
