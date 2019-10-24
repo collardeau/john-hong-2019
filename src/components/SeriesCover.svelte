@@ -1,10 +1,9 @@
 <script>
+  import { outline } from "../theme";
   export let title = "series";
   export let src = "";
   export let href = "#";
   export let alt = "cover image";
-
-  const outline = "focus:outline-none focus:shadow-outline";
 </script>
 
 <style>

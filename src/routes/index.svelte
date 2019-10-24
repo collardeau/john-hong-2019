@@ -1,6 +1,7 @@
 <script>
   import Wrapper from "../components/TransitionWrapper.svelte";
   import SeriesCover from "../components/SeriesCover.svelte";
+  import { heading } from "../theme";
   import { cloudinaryBase } from "../config";
   let w;
 </script>
@@ -29,9 +30,9 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="px-2 mb-8 absolute w-full">
-    <h3 class="text-white px-2 py-4 capitalize">View Series</h3>
-    <div class="w-full" bind:clientWidth={w}>
+  <section class="mb-8 absolute w-full">
+    <h3 class={heading}>View Series</h3>
+    <div class="w-full px-2" bind:clientWidth={w}>
       <SeriesCover
         title="new work"
         href="/new-work"

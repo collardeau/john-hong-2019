@@ -1,7 +1,7 @@
 <script>
+  import { outline } from "../theme";
   import { cloudinaryBase } from "../config";
   export let posts = [];
-  const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
   let w;
 </script>
 

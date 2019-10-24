@@ -1,5 +1,6 @@
 <script>
   import { slide } from "svelte/transition";
+  import { outline } from "../theme";
   export let segment;
 
   let isOpen = false;
@@ -35,7 +36,6 @@
     // isOpen = false;
   };
 
-  const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
   const title = "john hong studio";
 </script>
 
