@@ -1,9 +1,10 @@
 <script>
+  import { onMount } from "svelte";
   import { slide } from "svelte/transition";
   import qs from "query-string";
-  let name = "",
-    email = "",
-    message = "";
+  let message = "";
+  let name = "";
+  let email = "";
   $: disabled = !message;
 
   const reset = () => {
@@ -11,6 +12,17 @@
     email = "";
     message = "";
   };
+
+  onMount(() => {
+    message = localStorage.getItem("message");
+    name = localStorage.getItem("name");
+    email = localStorage.getItem("email");
+    return () => {
+      localStorage.setItem("message", message);
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+    };
+  });
 
   async function postData(data = {}) {
     const encoded = qs.stringify(data);
