@@ -1,34 +1,43 @@
 <script>
   import qs from "query-string";
-  let name, email, message;
+  let name = "",
+    email = "",
+    message = "";
+  $: disabled = !message;
 
-  async function postData(url = "", data = {}) {
-    const response = await fetch(url, {
+  const reset = () => {
+    name = "";
+    email = "";
+    message = "";
+  };
+
+  async function postData(data = {}) {
+    const encoded = qs.stringify(data);
+    const res = await fetch("", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: data
-      // statusText: data
+      body: encoded
     });
-    return response;
+    if (res.ok) {
+      reset();
+      return res;
+    } else {
+      console.error(res);
+      throw new Error(res);
+    }
   }
 
-  async function onSubmit(e) {
+  let promise;
+
+  function onSubmit(e) {
     e.preventDefault();
-    try {
-      let formData = { "form-name": "contact", name, email, message };
-      const dataToSend = qs.stringify(formData);
-      console.log({ dataToSend });
-      const data = await postData("", dataToSend);
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
+    disabled = true;
+    promise = postData({ "form-name": "contact", name, email, message });
   }
 </script>
 
-<!-- <form name="contact" method="POST" data-netlif÷y="true" on:submit={onSubmit}> -->
 <form name="contact" data-netlify="true" on:submit={onSubmit}>
   <div class="flex justify-between items-center pb-2">
     <label class="w-1/3" for="name">Your Name:</label>
@@ -60,8 +69,23 @@
       placeholder="your message here" />
   </div>
   <div class="mt-4">
-    <button class="w-full bg-gray-800 text-gray-200 py-2 rounded" type="submit">
-      Send
+    <button
+      {disabled}
+      class="w-full py-2 rounded {disabled ? 'bg-gray-200 text-gray-600' : 'text-gray-200 bg-gray-800'}"
+      type="submit">
+      Submit
     </button>
   </div>
 </form>
+
+{#if promise}
+  {#await promise}
+    <div class="py-4 text-gray-600">Submitting...</div>
+  {:then value}
+    <div class="py-4 text-green-500">Form succesfully submitted</div>
+  {:catch error}
+    <div class="py-4 text-red-500">
+      Something went wrong with your submission
+    </div>
+  {/await}
+{/if}
