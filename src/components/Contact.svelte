@@ -1,4 +1,5 @@
 <script>
+  import qs from "query-string";
   let name, email, message;
 
   async function postData(url = "", data = {}) {
@@ -21,8 +22,11 @@
   async function onSubmit(e) {
     e.preventDefault();
     try {
-      const data = await postData("contact", { name, email, message });
-      console.log(data); // JSON-string from `response.json()` call
+      let formData = { "form-name": "contact", name, email, message };
+      const dataToSend = qs.stringify(formData);
+      console.log({ dataToSend });
+      const data = await postData("", dataToSend);
+      console.log(data);
     } catch (error) {
       console.error(error);
     }
@@ -30,7 +34,7 @@
 </script>
 
 <!-- <form name="contact" method="POST" data-netlif÷y="true" on:submit={onSubmit}> -->
-<form name="contact" action="contact" data-netlify="true" on:submit={onSubmit}>
+<form name="contact" data-netlify="true" on:submit={onSubmit}>
   <div class="flex justify-between items-center pb-2">
     <label class="w-1/3" for="name">Your Name:</label>
     <input
