@@ -13,7 +13,7 @@
   <title>About</title>
 </svelte:head>
 
-<section class="bg-gray-300 p-4">
+<section class="bg-gray-300 p-4 pr-3">
   <div class="flex justify-between items-center">
     <h3 class="font-semibold">Contact John</h3>
     <button type="button" class="w-6 h-6 text-gray-800" on:click={toggleForm}>

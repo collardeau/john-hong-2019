@@ -47,7 +47,13 @@ const postcssPlugins = (purgecss = false) => {
           "active:bg-gray-900",
           "text-white",
           "p-4",
-          "capitalize"
+          "capitalize",
+          "cursor-not-allowed",
+          "cursor-pointer",
+          "bg-gray-200",
+          "text-gray-600",
+          "text-gray-200",
+          "bg-gray-800"
         ]
       }),
     !dev && require("cssnano")
