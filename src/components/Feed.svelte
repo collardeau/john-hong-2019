@@ -13,7 +13,7 @@
       <div>
         <a
           rel="prefetch"
-          href="artwork/{slug}"
+          href="art/{slug}"
           class="text-gray-700 hover:text-gray-900 block w-8 h-8 p-1 {outline}">
           <svg
             class="fill-current"

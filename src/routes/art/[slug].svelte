@@ -1,6 +1,6 @@
 <script context="module">
   export async function preload({ params, query }) {
-    const res = await this.fetch(`artwork/${params.slug}.json`);
+    const res = await this.fetch(`art/${params.slug}.json`);
     const data = await res.json();
     if (res.status === 200) {
       return { data };
@@ -65,7 +65,7 @@
     <a
       on:click={onClick}
       rel="prefetch"
-      href="/artwork/{prev}"
+      href="/art/{prev}"
       class="block p-2 text-gray-400 hover:text-white {outline}">
       <svg
         class="fill-current"
@@ -81,7 +81,7 @@
     <a
       on:click={onClick}
       rel="prefetch"
-      href="/artwork/{next}"
+      href="/art/{next}"
       class="block p-2 text-gray-400 hover:text-white {outline}">
       <svg
         class="fill-current"

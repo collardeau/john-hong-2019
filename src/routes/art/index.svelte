@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`artwork.json`)
+    return this.fetch(`art.json`)
       .then(r => r.json())
       .then(posts => {
         return { posts };
