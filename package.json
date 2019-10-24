@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "john-hong-studio",
+  "description": "John Hong Portfolio",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
