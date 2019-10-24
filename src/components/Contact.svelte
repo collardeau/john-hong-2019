@@ -3,20 +3,15 @@
   let name, email, message;
 
   async function postData(url = "", data = {}) {
-    // Default options are marked with *
     const response = await fetch(url, {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      method: "POST",
       headers: {
-        // "Content-Type": "application/json"
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      // referrer: "no-referrer", // no-referrer, *client
-      body: data, // body data type must match "Content-Type" header
-      statusText: data
+      body: data
+      // statusText: data
     });
     return response;
-    // return await response.json(); // parses JSON response into native JavaScript objects
   }
 
   async function onSubmit(e) {
