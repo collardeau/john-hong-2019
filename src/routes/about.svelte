@@ -1,12 +1,45 @@
 <script>
+  import { slide } from "svelte/transition";
   import ContactForm from "../components/Contact.svelte";
+
+  let showContact = false;
+
+  const toggleForm = () => {
+    showContact = !showContact;
+  };
 </script>
 
 <svelte:head>
   <title>About</title>
 </svelte:head>
 
-<ContactForm />
+<section class="bg-gray-300 p-4">
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold">Contact John</h3>
+    <button type="button" class="w-6 h-6 text-gray-800" on:click={toggleForm}>
+      <svg
+        class="fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20">
+        {#if showContact}
+          <path
+            d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243
+            4.242L15.657 12z" />
+        {:else}
+          <path
+            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586
+            4.343 8z" />
+        {/if}
+      </svg>
+
+    </button>
+  </div>
+  {#if showContact}
+    <div transition:slide={{ duration: 400 }} class="pt-6">
+      <ContactForm />
+    </div>
+  {/if}
+</section>
 
 <section class="bg-gray-100 p-4">
   <h3 class="font-semibold">Artist Statement</h3>
