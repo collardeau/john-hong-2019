@@ -1,13 +1,40 @@
 <script>
-  // bind some value and submit myself!
+  let name, email, message;
+
+  async function postData(url = "", data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      headers: {
+        // "Content-Type": "application/json"
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      referrer: "no-referrer", // no-referrer, *client
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return await response.json(); // parses JSON response into native JavaScript objects
+  }
+
+  async function onSubmit(e) {
+    e.preventDefault();
+    try {
+      const data = await postData("contact", { name, email, message });
+      console.log(JSON.stringify(data)); // JSON-string from `response.json()` call
+    } catch (error) {
+      console.error(error);
+    }
+  }
 </script>
 
-<form name="contact" method="POST" data-netlify="true">
+<!-- <form name="contact" method="POST" data-netlif÷y="true" on:submit={onSubmit}> -->
+<form name="contact" action="contact" data-netlify="true" on:submit={onSubmit}>
   <div class="flex justify-between items-center pb-2">
     <label class="w-1/3" for="name">Your Name:</label>
     <input
       class="flex-1 p-2"
       type="text"
+      bind:value={name}
       name="name"
       id="name"
       placeholder="type in your name" />
@@ -18,6 +45,7 @@
       class="flex-1 p-2"
       type="email"
       name="email"
+      bind:value={email}
       id="email"
       placeholder="type in your email" />
   </div>
@@ -26,6 +54,7 @@
     <textarea
       class="w-full p-2 h-32"
       name="message"
+      bind:value={message}
       id="message"
       placeholder="your message here" />
   </div>
