@@ -13,14 +13,15 @@
       referrer: "no-referrer", // no-referrer, *client
       body: JSON.stringify(data) // body data type must match "Content-Type" header
     });
-    return await response.json(); // parses JSON response into native JavaScript objects
+    return response;
+    // return await response.json(); // parses JSON response into native JavaScript objects
   }
 
   async function onSubmit(e) {
     e.preventDefault();
     try {
       const data = await postData("contact", { name, email, message });
-      console.log(JSON.stringify(data)); // JSON-string from `response.json()` call
+      console.log(data); // JSON-string from `response.json()` call
     } catch (error) {
       console.error(error);
     }
