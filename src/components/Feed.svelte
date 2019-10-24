@@ -8,13 +8,14 @@
 {#each posts as { img, title, slug }}
   <article class="mx-2 mb-6" bind:clientWidth={w}>
     <img class="w-full" src="{cloudinaryBase({ w })}{img}" alt={title} />
-    <section class="bg-gray-300 p-4 flex justify-between items-center">
+    <section
+      class="bg-gray-800 text-gray-100 p-4 flex justify-between items-center">
       <h5 class="uppercase font-medium tracking-wide font-medium ">{title}</h5>
       <div>
         <a
           rel="prefetch"
           href="art/{slug}"
-          class="text-gray-700 hover:text-gray-900 block w-8 h-8 p-1 {outline}">
+          class="text-gray-400 hover:text-white block w-8 h-8 p-1 {outline}">
           <svg
             class="fill-current"
             xmlns="http://www.w3.org/2000/svg"
