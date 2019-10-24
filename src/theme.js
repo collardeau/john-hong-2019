@@ -1,3 +1,5 @@
+// be sure to whitelist properties!
+
 export const outline =
   "focus:outline-none focus:shadow-outline active:bg-gray-900";
 
