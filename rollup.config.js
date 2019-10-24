@@ -44,7 +44,10 @@ const postcssPlugins = (purgecss = false) => {
         whitelist: [
           "focus:outline-none",
           "focus:shadow-outline",
-          "active:bg-gray-900"
+          "active:bg-gray-900",
+          "text-white",
+          "p-4",
+          "capitalize"
         ]
       }),
     !dev && require("cssnano")
