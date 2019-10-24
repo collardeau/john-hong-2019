@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
   import qs from "query-string";
-  import { outline } from "../theme";
+  import { outline, enabledBtn, disabledBtn } from "../theme";
 
   let message = "";
   let name = "";
@@ -86,7 +86,7 @@
   <div class="mt-4">
     <button
       {disabled}
-      class="{outline} w-full py-2 rounded {disabled ? 'cursor-not-allowed bg-gray-200 text-gray-600' : 'cursor-pointer text-gray-200 bg-gray-800'}"
+      class="{outline} w-full py-2 rounded {disabled ? disabledBtn : enabledBtn}"
       type="submit">
       Submit
     </button>

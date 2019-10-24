@@ -45,15 +45,15 @@ const postcssPlugins = (purgecss = false) => {
           "focus:outline-none",
           "focus:shadow-outline",
           "active:bg-gray-900",
-          "text-white",
           "p-4",
           "capitalize",
           "cursor-not-allowed",
           "cursor-pointer",
           "bg-gray-200",
-          "text-gray-600",
+          "bg-gray-800",
           "text-gray-200",
-          "bg-gray-800"
+          "text-gray-300",
+          "text-gray-600"
         ]
       }),
     !dev && require("cssnano")
