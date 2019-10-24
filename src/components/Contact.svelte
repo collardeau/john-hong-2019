@@ -4,6 +4,7 @@
   import qs from "query-string";
   import { outline, enabledBtn, disabledBtn } from "../theme";
 
+  let promise;
   let message = "";
   let name = "";
   let email = "";
@@ -14,17 +15,6 @@
     email = "";
     message = "";
   };
-
-  onMount(() => {
-    message = localStorage.getItem("message");
-    name = localStorage.getItem("name");
-    email = localStorage.getItem("email");
-    return () => {
-      localStorage.setItem("message", message);
-      localStorage.setItem("name", name);
-      localStorage.setItem("email", email);
-    };
-  });
 
   async function postData(data = {}) {
     const encoded = qs.stringify(data);
@@ -44,7 +34,16 @@
     }
   }
 
-  let promise;
+  onMount(() => {
+    message = localStorage.getItem("message");
+    name = localStorage.getItem("name");
+    email = localStorage.getItem("email");
+    return () => {
+      localStorage.setItem("message", message);
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+    };
+  });
 
   function onSubmit(e) {
     e.preventDefault();
