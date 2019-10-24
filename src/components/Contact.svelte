@@ -1,4 +1,5 @@
 <script>
+  import { slide } from "svelte/transition";
   import qs from "query-string";
   let name = "",
     email = "",
@@ -59,7 +60,7 @@
       id="email"
       placeholder="type in your email" />
   </div>
-  <div class="pb-2">
+  <div>
     <label class="block pb-2" for="message">Message:</label>
     <textarea
       class="w-full p-2 h-32"
@@ -79,13 +80,35 @@
 </form>
 
 {#if promise}
-  {#await promise}
-    <div class="py-4 text-gray-600">Submitting...</div>
-  {:then value}
-    <div class="py-4 text-green-500">Form succesfully submitted</div>
-  {:catch error}
-    <div class="py-4 text-red-500">
-      Something went wrong with your submission
-    </div>
-  {/await}
+  <div transition:slide>
+    {#await promise}
+      <div class="pt-6 pb-2 text-gray-600">Submitting...</div>
+    {:then value}
+      <div class="pt-6 pb-2 text-green-600 flex items-center">
+        <div class="h-6 w-6 mr-2">
+          <svg
+            class="fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+          </svg>
+        </div>
+        Message successfully submitted.
+      </div>
+    {:catch error}
+      <div class="pt-6 pb-2 text-red-600 flex items-center">
+        <div class="h-6 w-6 mr-2">
+          <svg
+            class="fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <path
+              d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zM9
+              5v6h2V5H9zm0 8v2h2v-2H9z" />
+          </svg>
+        </div>
+        Something went wrong with your submission.
+      </div>
+    {/await}
+  </div>
 {/if}
