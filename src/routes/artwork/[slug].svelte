@@ -47,10 +47,12 @@
         <h3 class="py-2 text-white uppercase text-lg font-medium">
           {post.title}
         </h3>
-        <p class="text-white capitalize text-sm">{post.materials}</p>
-        <p class="text-white text-sm">
-          {post.width} x {post.height} inches{post.each ? ' each' : ''}
-        </p>
+        <div class="text-gray-500 text-sm">
+          <p class="capitalize">{post.materials}</p>
+          <p class="">
+            {post.width} x {post.height} in{post.each ? ' each' : ''}
+          </p>
+        </div>
       </div>
     </section>
   {/if}
