@@ -11,7 +11,8 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       referrer: "no-referrer", // no-referrer, *client
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+      statusText: JSON.stringify(data)
     });
     return response;
     // return await response.json(); // parses JSON response into native JavaScript objects
