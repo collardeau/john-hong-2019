@@ -36,19 +36,19 @@
       <SeriesCover
         title="new work"
         href="/new-work"
-        src="{cloudinaryBase({ w })}img/graffiti-1.jpg" />
+        src="{cloudinaryBase({ w })}artwork/graffiti-1.jpg" />
       <SeriesCover
         title="work on paper"
         href="/work-on-paper"
-        src="{cloudinaryBase({ w })}img/the-light-for-grace.jpg" />
+        src="{cloudinaryBase({ w })}artwork/the-light-for-grace.jpg" />
       <SeriesCover
         title="mixed media"
         href="/mixed-media"
-        src="{cloudinaryBase({ w })}img/empress.jpg" />
+        src="{cloudinaryBase({ w })}artwork/empress.jpg" />
       <SeriesCover
         title="miscellaneous"
         href="/miscellaneous"
-        src="{cloudinaryBase({ w })}img/dance-5.jpg" />
+        src="{cloudinaryBase({ w })}artwork/dance-5.jpg" />
     </div>
   </section>
 </Wrapper>
