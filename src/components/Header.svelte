@@ -33,7 +33,7 @@
   };
 
   const onClick = () => {
-    // isOpen = false;
+    isOpen = false;
   };
 
   const title = "john hong studio";
