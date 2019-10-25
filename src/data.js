@@ -36,6 +36,15 @@ const posts = [
     group: "mixed"
   },
   {
+    title: "Window",
+    slug: "window",
+    height: 38,
+    width: 38,
+    materials: "mixed media on canvas",
+    img: "img/window.jpg",
+    group: "mixed"
+  },
+  {
     title: "Neo",
     slug: "neo",
     height: 28,
@@ -80,6 +89,71 @@ const posts = [
     img: "artwork/backstage.jpg",
     group: "mixed"
   },
+  // {
+  //   title: "Garden",
+  //   slug: "garden",
+  //   height: 24,
+  //   width: 30,
+  //   materials: "mixed media on panel",
+  //   img: "img/garden.jpg",
+  //   group: "mixed"
+  // },
+  {
+    title: "Rain",
+    slug: "rain",
+    height: 78,
+    width: 78,
+    materials: "mixed media on canvas",
+    img: "img/rain.jpg",
+    group: "mixed"
+  },
+  {
+    title: "Kiss",
+    slug: "kiss",
+    height: 52,
+    width: 52,
+    materials: "mixed media on canvas",
+    img: "img/kiss.jpg",
+    group: "mixed"
+  },
+  {
+    title: "Family Mandala",
+    slug: "family",
+    height: 54,
+    width: 54,
+    materials: "mixed media on canvas",
+    img: "img/family.jpg",
+    group: "mixed"
+  },
+  {
+    title: "Auspicious T",
+    slug: "auspicious-t",
+    height: 24,
+    width: 24,
+    materials: "mixed media on panel",
+    img: "img/auspicious-t.jpg",
+    group: "mixed"
+  },
+  {
+    title: "Bodhisattvas",
+    slug: "bodhisattvas",
+    height: 36,
+    width: 36,
+    materials: "mixed media on canvas",
+    img: "img/bodhisattvas.jpg",
+    group: "mixed"
+  },
+  {
+    title: "Still Life Moon",
+    slug: "still-life-moon",
+    height: 36,
+    width: 50,
+    materials: "mixed media on canvas",
+    img: "img/still-life-moon.jpg",
+    group: "mixed"
+  },
+
+  // ON PAPER
   {
     title: "The light (for grace)",
     slug: "the-light-for-grace",
@@ -89,34 +163,74 @@ const posts = [
     img: "artwork/the-light-for-grace.jpg",
     group: "paper"
   },
+  // {
+  //   title: "Sadie's Arc",
+  //   slug: "sadie",
+  //   height: 30,
+  //   width: 22,
+  //   each: true,
+  //   materials: "synthetic polymer on paper. diptych",
+  //   img: "artwork/sadie.jpg",
+  //   group: "paper"
+  // },
+  // {
+  //   title: "from here",
+  //   slug: "from-here",
+  //   height: 30,
+  //   width: 24,
+  //   each: true,
+  //   materials: "synthetic polymer on paper. diptych",
+  //   img: "img/from-here.jpg",
+  //   group: "paper"
+  // },
   {
-    title: "Sadie's Arc",
-    slug: "sadie",
+    title: "While Years Roll Past",
+    slug: "while-years-roll-past",
     height: 30,
     width: 22,
     each: true,
     materials: "synthetic polymer on paper. diptych",
-    img: "artwork/sadie.jpg",
+    img: "img/while-years-roll-past.jpg",
     group: "paper"
   },
   {
-    title: "from here",
-    slug: "from-here",
+    title: "Where The Rivers",
+    slug: "where-the-rivers",
     height: 30,
-    width: 24,
+    width: 23,
     each: true,
     materials: "synthetic polymer on paper. diptych",
-    img: "artwork/from-here.jpg",
+    img: "img/where-the-rivers.jpg",
     group: "paper"
   },
+  // {
+  //   title: "Another Time's",
+  //   slug: "another-times",
+  //   height: 30,
+  //   width: 22,
+  //   each: true,
+  //   materials: "synthetic polymer on paper. diptych",
+  //   img: "artwork/another-times.jpg",
+  //   group: "paper"
+  // },
   {
-    title: "Another Time's",
-    slug: "another-times",
+    title: "Rock Circle",
+    slug: "rock-circle",
     height: 30,
     width: 22,
     each: true,
     materials: "synthetic polymer on paper. diptych",
-    img: "artwork/another-times.jpg",
+    img: "img/rock-circle.jpg",
+    group: "paper"
+  },
+  {
+    title: "Night",
+    slug: "night",
+    height: 30,
+    width: 22,
+    each: true,
+    materials: "synthetic polymer on paper. diptych",
+    img: "img/night.jpg",
     group: "paper"
   },
   // {
@@ -206,7 +320,7 @@ const posts = [
     height: 9,
     width: 12,
     materials: "ink on paper",
-    img: "artwork/sing-1.jpg",
+    img: "img/sing-1.jpg",
     group: "misc"
   },
   {
@@ -228,6 +342,16 @@ const posts = [
     group: "misc"
   },
   {
+    title: "Untitled 2",
+    slug: "untitled-2",
+    height: 29,
+    width: 41,
+    materials: "conte crayon on paper",
+    img: "img/untitled-02.jpg",
+    group: "misc"
+  },
+  // NEW WORK
+  {
     title: "Untitled 7",
     slug: "untitled-07",
     height: 0,
@@ -242,7 +366,7 @@ const posts = [
     height: 0,
     width: 0,
     materials: "",
-    artwork: "artwork/graffiti-2.jpg",
+    img: "artwork/graffiti-2.jpg",
     group: "recent"
   },
   {
