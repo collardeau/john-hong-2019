@@ -407,6 +407,15 @@ const posts = [
 
   // NEW WORK
   {
+    title: "New Work 3",
+    slug: "new-work-3",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "artwork/new-work-03.jpg",
+    group: "recent"
+  },
+  {
     title: "New Work 1",
     slug: "new-work-1",
     height: 0,
@@ -422,15 +431,6 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-02.jpg",
-    group: "recent"
-  },
-  {
-    title: "New Work 3",
-    slug: "new-work-3",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-03.jpg",
     group: "recent"
   },
   {

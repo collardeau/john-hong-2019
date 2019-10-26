@@ -20,8 +20,8 @@
       class="bg absolute w-full bottom-0 flex-col justify-center text-center
       py-10">
       <span
-        class="rounded-full bg-gray-700 px-6 py-2 font-medium tracking-wide
-        capitalize">
+        class="rounded-full bg-gray-700 px-6 py-2 font-medium tracking-wider
+        uppercase">
         {title}
       </span>
     </div>
