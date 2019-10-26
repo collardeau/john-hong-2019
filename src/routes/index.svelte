@@ -10,7 +10,7 @@
   div {
     display: grid;
     grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(4, 37vh);
+    grid-template-rows: repeat(4, 39vh);
     grid-gap: 1.5rem;
     height: auto;
   }

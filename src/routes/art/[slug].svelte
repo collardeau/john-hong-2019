@@ -66,14 +66,15 @@
       on:click={onClick}
       rel="prefetch"
       href="/art/{prev}"
-      class="block p-2 text-gray-400 hover:text-white {outline}">
+      class="block p-2 text-gray-500 hover:text-white {outline}">
       <svg
         class="fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20">
         <path
-          d="M0 10a10 10 0 1 1 20 0 10 10 0 0 1-20 0zm2 0a8 8 0 1 0 16 0 8 8 0 0
-          0-16 0zm8-2h5v4h-5v3l-5-5 5-5v3z" />
+          d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0
+          0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76
+          10l.7-.7z" />
       </svg>
     </a>
   </div>
@@ -82,15 +83,17 @@
       on:click={onClick}
       rel="prefetch"
       href="/art/{next}"
-      class="block p-2 text-gray-400 hover:text-white {outline}">
+      class="block p-2 text-gray-500 hover:text-white {outline}">
       <svg
         class="fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20">
         <path
-          d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0
-          0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z" />
+          d="M10 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM2 10a8 8 0 1 0 16 0 8 8 0
+          0 0-16 0zm10.54.7L9 14.25l-1.41-1.41L10.4 10 7.6 7.17 9 5.76 13.24
+          10l-.7.7z" />
       </svg>
+
     </a>
   </div>
 </section>

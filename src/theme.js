@@ -1,7 +1,7 @@
 // be sure to whitelist properties!
 
 export const outline =
-  "focus:outline-none focus:shadow-outline active:bg-gray-900";
+  "focus:outline-none focus:shadow-outline active:bg-gray-600";
 
 export const heading = "text-gray-300 p-4 capitalize";
 

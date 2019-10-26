@@ -77,7 +77,7 @@
   </div>
   {#if isOpen}
     <nav
-      transition:slide={{ duration: 300 }}
+      transition:slide={{ duration: 350 }}
       class="px-2 pb-4 absolute right-0 w-full z-10 bg-gray-800">
       <a href="art" class="hidden">Artwork</a>
       {#each links as { href, name }}

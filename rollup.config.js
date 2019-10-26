@@ -44,7 +44,7 @@ const postcssPlugins = (purgecss = false) => {
         whitelist: [
           "focus:outline-none",
           "focus:shadow-outline",
-          "active:bg-gray-900",
+          "active:bg-gray-600",
           "p-4",
           "capitalize",
           "cursor-not-allowed",
