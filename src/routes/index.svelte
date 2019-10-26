@@ -36,7 +36,7 @@
       <SeriesCover
         title="new work"
         href="/new-work"
-        src="{cloudinaryBase({ w })}artwork/graffiti-1.jpg" />
+        src="{cloudinaryBase({ w })}artwork/new-work-03.jpg" />
       <SeriesCover
         title="work on paper"
         href="/work-on-paper"
