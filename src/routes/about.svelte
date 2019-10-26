@@ -89,5 +89,13 @@
       </span>
     </li>
   </ul>
+  <h3 class="font-semibold mt-4">Social Media</h3>
+  <p>
+    Instagram:
+    <a href="https://instagram.com/johnhong.studio" class="text-blue-700">
+      @johnhong.studio
+    </a>
+  </p>
+  <p class="mt-4 font-medium">Thank you for visiting John Hong Studio!</p>
 
 </section>
