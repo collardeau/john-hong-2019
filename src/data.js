@@ -144,7 +144,7 @@ const posts = [
     group: "mixed"
   },
   {
-    title: "Still Life Moon",
+    title: "Still Life With Moon On The Table",
     slug: "still-life-moon",
     height: 36,
     width: 50,
