@@ -89,6 +89,7 @@
       </span>
     </li>
   </ul>
+  <img src="img/peanuts.jpg" class="w-3/4 mx-auto my-6" alt="artist sketch" />
   <h3 class="font-semibold mt-4">Social Media</h3>
   <p>
     Instagram:
