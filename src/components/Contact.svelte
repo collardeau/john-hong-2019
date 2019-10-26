@@ -35,9 +35,9 @@
   }
 
   onMount(() => {
-    message = localStorage.getItem("message");
-    name = localStorage.getItem("name");
-    email = localStorage.getItem("email");
+    message = localStorage.getItem("message") || "";
+    name = localStorage.getItem("name") || "";
+    email = localStorage.getItem("email") || "";
     return () => {
       localStorage.setItem("message", message);
       localStorage.setItem("name", name);
@@ -61,7 +61,7 @@
       bind:value={name}
       name="name"
       id="name"
-      placeholder="type in your name" />
+      placeholder="your name here" />
   </div>
   <div class="flex justify-between items-center pb-2">
     <label class="w-1/3" for="email">Your Email:</label>
@@ -71,12 +71,12 @@
       name="email"
       bind:value={email}
       id="email"
-      placeholder="type in your email" />
+      placeholder="your email here" />
   </div>
   <div>
-    <label class="block pb-2" for="message">Message:</label>
+    <label class="block pt-2 pb-2" for="message">Your Message:</label>
     <textarea
-      class="{outline} w-full p-2 h-32"
+      class="{outline} w-full p-2 h-48"
       name="message"
       bind:value={message}
       id="message"
