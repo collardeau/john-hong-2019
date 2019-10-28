@@ -25,11 +25,22 @@
 
   const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
   let w;
+
+  const handleKeydown = e => {
+    if (e.keyCode === 39) {
+      window.location.href = `/art/${next}`;
+    }
+    if (e.keyCode === 37) {
+      window.location.href = `/art/${prev}`;
+    }
+  };
 </script>
 
 <svelte:head>
   <title>{post.title}</title>
 </svelte:head>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <Wrapper>
   {#if show}
