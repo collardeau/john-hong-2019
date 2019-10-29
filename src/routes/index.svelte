@@ -6,31 +6,12 @@
   let w;
 </script>
 
-<style>
-  div {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(4, 39vh);
-    grid-gap: 1rem;
-    height: auto;
-  }
-
-  @media (min-width: 640px) {
-    div {
-      grid-template-columns: repeat(2, 50%);
-      grid-template-rows: repeat(2, 50%);
-      grid-gap: 1rem;
-      height: calc(93vh - 1rem);
-    }
-  }
-</style>
-
 <svelte:head>
   <title>John Hong Studio</title>
 </svelte:head>
 
 <Wrapper>
-  <section class="mb-8 absolute w-full">
+  <section class="mb-4 absolute w-full">
     <h3 class={heading}>View Series</h3>
     <div class="w-full px-2" bind:clientWidth={w}>
       <SeriesCover
