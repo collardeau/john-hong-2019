@@ -1,7 +1,7 @@
 <script>
-  // import Nav from "../components/Nav.svelte";
   import Header from "../components/Header.svelte";
   export let segment;
+  $: gutter = segment === "about" ? "mx-0" : "mx-2"; // dynamic class
 </script>
 
 <style>
@@ -17,6 +17,6 @@
 </style>
 
 <Header {segment} />
-<main class="container mx-auto">
+<main class="max-w-xl {gutter} sm:mx-auto">
   <slot />
 </main>

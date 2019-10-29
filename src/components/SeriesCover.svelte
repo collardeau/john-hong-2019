@@ -13,14 +13,14 @@
   }
 </style>
 
-<a {href} class="block {outline} mb-2">
+<a {href} class="block {outline} mb-2 sm:mb-4 xl:mb-6">
   <div class="relative h-64">
     <img {src} {alt} class="object-cover w-full h-full" />
     <div
       class="bg absolute w-full bottom-0 flex-col justify-center text-center
       py-10">
       <span
-        class="rounded-full bg-gray-700 px-6 py-2 font-medium tracking-wider
+        class="rounded bg-gray-800 px-6 py-2 font-medium tracking-wider
         uppercase">
         {title}
       </span>

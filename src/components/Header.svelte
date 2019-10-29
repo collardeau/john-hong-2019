@@ -39,17 +39,10 @@
   const title = "john hong studio";
 </script>
 
-<style>
-  header {
-    height: 7vh;
-  }
-</style>
-
 <!-- mobile -->
-<header
-  class="relative md:hidden pl-2 pr-2 bg-gray-800 text-white items-center">
+<header class="relative lg:hidden p-2 bg-gray-800 text-white items-center">
   <div class="flex justify-between items-center h-full">
-    <h1 class="uppercase font-medium tracking-wider">
+    <h1 class="uppercase font-medium tracking-wider text-lg sm:text-xl">
       {#if segment}
         <a href="/" class="p-2 {outline}">{title}</a>
       {:else}
@@ -58,7 +51,7 @@
     </h1>
     <button
       type="button"
-      class="block w-8 h-8 p-2 text-gray-400 hover:text-white {outline}"
+      class="block w-8 h-8 sm:w-10 sm:h-10 p-2 text-gray-400 hover:text-white {outline}"
       on:click={handleClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +71,7 @@
   {#if isOpen}
     <nav
       transition:slide={{ duration: 350 }}
-      class="px-2 pb-4 absolute right-0 w-full z-10 bg-gray-800">
+      class="px-2 pb-4 mt-2 absolute right-0 w-full z-10 bg-gray-800">
       <a href="art" class="hidden">Artwork</a>
       {#each links as { href, name }}
         {#if segment === href}
@@ -99,8 +92,9 @@
 
 <!-- desktop -->
 <header
-  class="hidden md:flex justify-between px-4 bg-gray-800 text-white items-center">
-  <h1 class="uppercase font-medium tracking-wider">
+  class="hidden lg:flex justify-between px-8 py-4 bg-gray-800 text-white
+  items-center">
+  <h1 class="uppercase font-medium text-xl tracking-wider">
     {#if segment}
       <a href="/" class={outline}>{title}</a>
     {:else}
@@ -112,9 +106,9 @@
     <a href="art" class="hidden">artwork</a>
     {#each links as { href, name }}
       {#if segment === href}
-        <span class="p-2 ml-2 text-gray-600">{name}</span>
+        <span class="p-2 ml-4 text-gray-600">{name}</span>
       {:else}
-        <a {href} class="p-2 ml-2 hover:bg-gray-700 rounded {outline}">
+        <a {href} class="p-2 ml-4 hover:bg-gray-700 rounded {outline}">
           {name}
         </a>
       {/if}

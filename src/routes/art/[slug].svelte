@@ -45,7 +45,7 @@
 <Wrapper>
   {#if show}
     <section
-      class="px-2 mt-4 pb-20 text-center w-full"
+      class="mt-4 sm:mt-12 pb-20 text-center w-full"
       in:fade={{ duration: 400, delay: 100 }}
       out:fade={{ duration: 100 }}>
       <div bind:clientWidth={w}>
@@ -69,7 +69,7 @@
   {/if}
 </Wrapper>
 
-<section
+<nav
   class="text-gray-200 bg-gray-800 py-2 fixed bottom-0 left-0 w-full flex
   justify-around">
   <div class="h-10 w-10">
@@ -107,4 +107,4 @@
 
     </a>
   </div>
-</section>
+</nav>

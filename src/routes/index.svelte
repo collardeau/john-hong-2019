@@ -11,9 +11,9 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="mb-4 absolute w-full">
+  <section class="mb-4 w-full">
     <h3 class={heading}>View Series</h3>
-    <div class="w-full px-2" bind:clientWidth={w}>
+    <div class="w-full" bind:clientWidth={w}>
       <SeriesCover
         title="new work"
         href="/new-work"
