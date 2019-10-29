@@ -7,14 +7,14 @@
 </script>
 
 <section>
-  <h3 class={heading}>{title}</h3>
+  <h3 class={heading}>series: {title}</h3>
   {#each posts as { img, title, slug }}
     <article class="mb-6" bind:clientWidth={w}>
       <img class="w-full" src="{cloudinaryBase({ w })}{img}" alt={title} />
       <section
         class="bg-gray-800 text-white p-4 pr-2 flex justify-between items-center">
         <h5 class="uppercase font-medium tracking-wide font-medium ">
-          Series: {title}
+          {title}
         </h5>
         <div>
           <a
