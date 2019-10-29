@@ -11,8 +11,8 @@
 <script>
   import Wrapper from "../../components/TransitionWrapper.svelte";
   import Feed from "../../components/Feed.svelte";
-  import { heading } from "../../theme";
   export let posts;
+  let title = "work on paper";
 </script>
 
 <svelte:head>
@@ -20,8 +20,5 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="max-w-lg m-auto">
-    <h3 class={heading}>series: work on paper</h3>
-    <Feed {posts} />
-  </section>
+  <Feed {posts} {title} />
 </Wrapper>

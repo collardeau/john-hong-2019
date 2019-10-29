@@ -6,10 +6,11 @@
         return { posts };
       });
   }
+  // this is a hidden page
+  let title = "art";
 </script>
 
 <script>
-  import Wrapper from "../../components/TransitionWrapper.svelte";
   import Feed from "../../components/Feed.svelte";
   export let posts;
 </script>
@@ -18,7 +19,4 @@
   <title>Artwork</title>
 </svelte:head>
 
-<section class="max-w-lg m-auto">
-  <h3 class="text-white p-4">Artwork</h3>
-  <Feed {posts} />
-</section>
+<Feed {posts} {title} />

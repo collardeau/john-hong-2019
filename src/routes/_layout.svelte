@@ -17,6 +17,6 @@
 </style>
 
 <Header {segment} />
-<main class="container m-auto">
+<main class="container mx-auto">
   <slot />
 </main>
