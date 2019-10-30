@@ -249,6 +249,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-2.jpg",
+    imgH: 1371,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -258,6 +260,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-3.jpg",
+    imgH: 1367,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -267,6 +271,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-4.jpg",
+    imgH: 1371,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -276,6 +282,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-5.jpg",
+    imgH: 1387,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -285,6 +293,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-6.jpg",
+    imgH: 1368,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -294,6 +304,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-7.jpg",
+    imgH: 1579,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -303,105 +315,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-8.jpg",
-    group: "misc"
-  },
-  {
-    title: "Dance 9",
-    slug: "dance-9",
-    height: 12,
-    width: 9,
-    materials: "ink on paper",
-    img: "artwork/dance-9.jpg",
-    group: "misc"
-  },
-  {
-    title: "Dance 10",
-    slug: "dance-10",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-10.jpg",
-    group: "misc"
-  },
-  {
-    title: "Dance 11",
-    slug: "dance-11",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-11.jpg",
-    group: "misc"
-  },
-  {
-    title: "Dance 12",
-    slug: "dance-12",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-12.jpg",
-    group: "misc"
-  },
-  {
-    title: "Dance 13",
-    slug: "dance-13",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-13.jpg",
-    group: "misc"
-  },
-  {
-    title: "Dance 14",
-    slug: "dance-14",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-14.jpg",
-    group: "misc"
-  },
-  {
-    title: "Sing 1",
-    slug: "sing-1",
-    height: 9,
-    width: 12,
-    materials: "ink on paper",
-    img: "img/sing-1.jpg",
-    group: "misc"
-  },
-  {
-    title: "Untitled 5",
-    slug: "untitled-5",
-    height: 14,
-    width: 9,
-    materials: "ink on paper",
-    img: "artwork/untitled-5.jpg",
-    group: "misc"
-  },
-  {
-    title: "Untitled 6",
-    slug: "untitled-6",
-    height: 12,
-    width: 9,
-    materials: "ink on paper",
-    img: "artwork/untitled-6.jpg",
-    group: "misc"
-  },
-  {
-    title: "Kitchen Tiles",
-    slug: "kitchen",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/kitchen-2.jpg",
-    group: "misc"
-  },
-  {
-    title: "Untitled 2",
-    slug: "untitled-2",
-    height: 29,
-    width: 41,
-    materials: "conte crayon on paper",
-    img: "img/untitled-02.jpg",
+    imgH: 1653,
+    imgW: 1024,
     group: "misc"
   },
 
