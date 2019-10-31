@@ -9,25 +9,25 @@
 
 <style>
   .bg {
-    background-color: hsla(220, 26%, 14%, 0.66);
-    color: #fff;
+    background-color: hsla(220, 26%, 14%, 0.5);
+    height: 33%;
   }
   .misc {
-    object-position: center 25%;
+    object-position: center 52%;
   }
 </style>
 
-<a {href} class="block {outline} mb-2 sm:mb-4 xl:mb-6">
+<a {href} class="block {outline} mb-3 sm:mb-4 xl:mb-6">
   <div class="relative h-64">
     <img {src} {alt} class:misc class="object-cover w-full h-full" />
-    <div
-      class="bg absolute w-full bottom-0 flex-col justify-center text-center
-      py-10">
-      <span
-        class="rounded bg-gray-800 px-6 py-2 font-medium tracking-wider
-        uppercase">
-        {title}
-      </span>
+    <div class="bg absolute w-full bottom-0">
+      <div class="flex flex-row-reverse -mt-4 pl-6">
+        <span
+          class="bg-gray-900 rounded py-2 px-4 mr-8 text-white font-medium
+          tracking-wider uppercase">
+          {title}
+        </span>
+      </div>
     </div>
   </div>
 </a>

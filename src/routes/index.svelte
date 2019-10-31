@@ -8,12 +8,7 @@
     {
       title: "new work",
       href: "new-work",
-      img: "new-work-03.jpg"
-    },
-    {
-      title: "work on paper",
-      href: "work-on-paper",
-      img: "the-light-for-grace.jpg"
+      img: "new-work-14.jpg"
     },
     {
       title: "mixed media",
@@ -21,9 +16,15 @@
       img: "empress.jpg"
     },
     {
+      title: "work on paper",
+      href: "work-on-paper",
+      img: "the-light-for-grace.jpg"
+    },
+
+    {
       title: "miscellaneous",
       href: "miscellaneous",
-      img: "dance-5.jpg"
+      img: "dance-10.jpg"
     }
   ];
 </script>
@@ -33,8 +34,8 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="mb-4 w-full">
-    <h3 class={heading}>View Series</h3>
+  <section class="w-full mt-3">
+    <!-- <h3 class={heading}>View Series</h3> -->
     <div class="w-full" bind:clientWidth={w}>
       {#each series as { title, href, img }}
         <SeriesCover
