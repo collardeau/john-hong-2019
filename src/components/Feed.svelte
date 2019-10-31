@@ -1,14 +1,14 @@
 <script>
   import { LazyLoadContainer, LazyLoad } from "svelte-lazyload";
+  import Img from "./ImageWrapper.svelte";
   import { outline, heading } from "../theme";
-  import { cloudinaryBase } from "../config";
   export let posts = [];
   export let title = "";
+
   let w;
-  let getHeight = (w, imgH, imgW) => {
+  const getHeight = (w, imgH, imgW) => {
     const ratio = imgH / imgW;
-    const h = Math.round(ratio * w);
-    return h;
+    return Math.round(ratio * w);
   };
 </script>
 
@@ -18,12 +18,7 @@
     {#each posts as { img, title, slug, imgH, imgW }}
       <LazyLoad id={slug}>
         <article class="mb-6" bind:clientWidth={w}>
-          <div style="height: {getHeight(w, imgH, imgW)}px">
-            <img
-              class="w-full"
-              src="{cloudinaryBase({ w, h: getHeight(w, imgH, imgW) })}{img}"
-              alt={title} />
-          </div>
+          <Img {w} {img} h={getHeight(w, imgH, imgW)} alt={title} />
           <section
             class="bg-gray-800 text-white p-4 pr-2 flex justify-between
             items-center">
