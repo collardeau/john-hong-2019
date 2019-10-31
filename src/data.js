@@ -6,6 +6,8 @@ const posts = [
     width: 48,
     materials: "mixed media on canvas",
     img: "artwork/empress.jpg",
+    imgH: 641,
+    imgW: 1024,
     group: "mixed"
   },
   {
@@ -15,6 +17,8 @@ const posts = [
     width: 64,
     materials: "mixed media on canvas",
     img: "artwork/the-bridge.jpg",
+    imgH: 671,
+    imgW: 1024,
     group: "mixed"
   },
   // {
@@ -24,6 +28,8 @@ const posts = [
   //   width: 64,
   //   materials: "mixed media on canvas",
   //   img: "img/the-nine.jpg",
+  //   imgH: ,
+  //   imgW: ,
   //   group: "mixed"
   // },
   {
@@ -33,6 +39,8 @@ const posts = [
     width: 40,
     materials: "mixed media on canvas",
     img: "artwork/mark-at-the-gate.jpg",
+    imgH: 1032,
+    imgW: 1024,
     group: "mixed"
   },
   {
@@ -41,6 +49,8 @@ const posts = [
     height: 38,
     width: 38,
     materials: "mixed media on canvas",
+    imgH: 559,
+    imgW: 559,
     img: "img/window.jpg",
     group: "mixed"
   },
@@ -50,6 +60,8 @@ const posts = [
     height: 28,
     width: 44,
     materials: "mixed media on canvas",
+    imgH: 651,
+    imgW: 1024,
     img: "artwork/neo.jpg",
     group: "mixed"
   },
@@ -60,6 +72,8 @@ const posts = [
   //   width: 38,
   //   materials: "mixed media on canvas",
   //   img: "artwork/all-the-tea-in-china.jpg",
+  //   imgH: ,
+  //   imgW: ,
   //   group: "mixed"
   // },
   {
@@ -69,6 +83,8 @@ const posts = [
     width: 42,
     materials: "mixed media on canvas",
     img: "artwork/riff.jpg",
+    imgH: 960,
+    imgW: 976,
     group: "mixed"
   },
   {
@@ -78,6 +94,8 @@ const posts = [
     width: 40,
     materials: "mixed media on canvas",
     img: "artwork/mimic.jpg",
+    imgH: 1024,
+    imgW: 1024,
     group: "mixed"
   },
   {
@@ -87,6 +105,8 @@ const posts = [
     width: 70,
     materials: "mixed media on panel",
     img: "artwork/backstage.jpg",
+    imgH: 332,
+    imgW: 1024,
     group: "mixed"
   },
   // {
@@ -96,6 +116,8 @@ const posts = [
   //   width: 30,
   //   materials: "mixed media on panel",
   //   img: "img/garden.jpg",
+  //   imgH: ,
+  //   imgW: ,
   //   group: "mixed"
   // },
   {
@@ -105,6 +127,8 @@ const posts = [
     width: 78,
     materials: "mixed media on canvas",
     img: "img/rain.jpg",
+    imgH: 512,
+    imgW: 518,
     group: "mixed"
   },
   {
@@ -114,6 +138,8 @@ const posts = [
     width: 52,
     materials: "mixed media on canvas",
     img: "img/kiss.jpg",
+    imgH: 512,
+    imgW: 553,
     group: "mixed"
   },
   {
@@ -123,6 +149,8 @@ const posts = [
     width: 54,
     materials: "mixed media on canvas",
     img: "img/family.jpg",
+    imgH: 512,
+    imgW: 511,
     group: "mixed"
   },
   {
@@ -132,6 +160,8 @@ const posts = [
     width: 24,
     materials: "mixed media on panel",
     img: "img/auspicious-t.jpg",
+    imgH: 512,
+    imgW: 518,
     group: "mixed"
   },
   {
@@ -141,6 +171,8 @@ const posts = [
     width: 36,
     materials: "mixed media on canvas",
     img: "img/bodhisattvas.jpg",
+    imgH: 512,
+    imgW: 513,
     group: "mixed"
   },
   {
@@ -150,6 +182,8 @@ const posts = [
     width: 50,
     materials: "mixed media on canvas",
     img: "img/still-life-moon.jpg",
+    imgH: 434,
+    imgW: 604,
     group: "mixed"
   },
 
@@ -161,6 +195,8 @@ const posts = [
     width: 22,
     materials: "synthetic polymer on paper",
     img: "artwork/the-light-for-grace.jpg",
+    imgH: 1280,
+    imgW: 954,
     group: "paper"
   },
   // {
@@ -171,6 +207,8 @@ const posts = [
   //   each: true,
   //   materials: "synthetic polymer on paper. diptych",
   //   img: "artwork/sadie.jpg",
+  //   imgH:,
+  //   imgW:,
   //   group: "paper"
   // },
   // {
@@ -181,6 +219,8 @@ const posts = [
   //   each: true,
   //   materials: "synthetic polymer on paper. diptych",
   //   img: "img/from-here.jpg",
+  //   imgH:,
+  //   imgW:,
   //   group: "paper"
   // },
   {
@@ -191,6 +231,8 @@ const posts = [
     each: true,
     materials: "synthetic polymer on paper. diptych",
     img: "img/while-years-roll-past.jpg",
+    imgH: 388,
+    imgW: 581,
     group: "paper"
   },
   {
@@ -201,6 +243,8 @@ const posts = [
     each: true,
     materials: "synthetic polymer on paper. diptych",
     img: "img/where-the-rivers.jpg",
+    imgH: 501,
+    imgW: 729,
     group: "paper"
   },
   // {
@@ -211,6 +255,8 @@ const posts = [
   //   each: true,
   //   materials: "synthetic polymer on paper. diptych",
   //   img: "artwork/another-times.jpg",
+  //   imgH:,
+  //   imgW:,
   //   group: "paper"
   // },
   {
@@ -221,6 +267,8 @@ const posts = [
     each: true,
     materials: "synthetic polymer on paper. diptych",
     img: "img/rock-circle.jpg",
+    imgH: 434,
+    imgW: 640,
     group: "paper"
   },
   {
@@ -231,6 +279,8 @@ const posts = [
     each: true,
     materials: "synthetic polymer on paper. diptych",
     img: "img/night.jpg",
+    imgH: 443,
+    imgW: 638,
     group: "paper"
   },
   // {
@@ -240,6 +290,8 @@ const posts = [
   //   width: 8,
   //   materials: "ink on paper",
   //   img: "img/dance-1.jpg",
+  //   imgH:,
+  //   imgW:,
   //   group: "misc"
   // },
   {
@@ -249,6 +301,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-2.jpg",
+    imgH: 1371,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -258,6 +312,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-3.jpg",
+    imgH: 1367,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -267,6 +323,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-4.jpg",
+    imgH: 1575,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -276,6 +334,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-5.jpg",
+    imgH: 1387,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -285,6 +345,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-6.jpg",
+    imgH: 1368,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -294,6 +356,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-7.jpg",
+    imgH: 1579,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -303,6 +367,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-8.jpg",
+    imgH: 1653,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -312,6 +378,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/dance-9.jpg",
+    imgH: 1383,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -321,6 +389,8 @@ const posts = [
     width: 0,
     materials: "ink on paper",
     img: "artwork/dance-10.jpg",
+    imgH: 1280,
+    imgW: 960,
     group: "misc"
   },
   {
@@ -330,6 +400,8 @@ const posts = [
     width: 0,
     materials: "ink on paper",
     img: "artwork/dance-11.jpg",
+    imgH: 1280,
+    imgW: 960,
     group: "misc"
   },
   {
@@ -339,6 +411,8 @@ const posts = [
     width: 0,
     materials: "ink on paper",
     img: "artwork/dance-12.jpg",
+    imgH: 1280,
+    imgW: 960,
     group: "misc"
   },
   {
@@ -348,6 +422,8 @@ const posts = [
     width: 0,
     materials: "ink on paper",
     img: "artwork/dance-13.jpg",
+    imgH: 1106,
+    imgW: 1125,
     group: "misc"
   },
   {
@@ -357,6 +433,8 @@ const posts = [
     width: 0,
     materials: "ink on paper",
     img: "artwork/dance-14.jpg",
+    imgH: 1280,
+    imgW: 966,
     group: "misc"
   },
   {
@@ -365,6 +443,8 @@ const posts = [
     height: 9,
     width: 12,
     materials: "ink on paper",
+    imgH: 600,
+    imgW: 794,
     img: "img/sing-1.jpg",
     group: "misc"
   },
@@ -375,6 +455,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/untitled-5.jpg",
+    imgH: 1616,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -384,6 +466,8 @@ const posts = [
     width: 9,
     materials: "ink on paper",
     img: "artwork/untitled-6.jpg",
+    imgH: 1369,
+    imgW: 1024,
     group: "misc"
   },
   {
@@ -393,6 +477,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/kitchen-2.jpg",
+    imgH: 960,
+    imgW: 1280,
     group: "misc"
   },
   {
@@ -402,6 +488,8 @@ const posts = [
     width: 41,
     materials: "conte crayon on paper",
     img: "img/untitled-02.jpg",
+    imgH: 464,
+    imgW: 640,
     group: "misc"
   },
 
@@ -413,6 +501,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-03.jpg",
+    imgH: 1185,
+    imgW: 976,
     group: "recent"
   },
   {
@@ -422,6 +512,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-01.jpg",
+    imgH: 1186,
+    imgW: 968,
     group: "recent"
   },
   {
@@ -431,6 +523,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-02.jpg",
+    imgH: 1201,
+    imgW: 923,
     group: "recent"
   },
   {
@@ -440,6 +534,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-04.jpg",
+    imgH: 1187,
+    imgW: 969,
     group: "recent"
   },
   {
@@ -449,6 +545,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-05.jpg",
+    imgH: 1210,
+    imgW: 997,
     group: "recent"
   },
   {
@@ -458,6 +556,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-06.jpg",
+    imgH: 1180,
+    imgW: 965,
     group: "recent"
   },
   {
@@ -467,6 +567,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-07.jpg",
+    imgH: 1196,
+    imgW: 894,
     group: "recent"
   },
   {
@@ -476,6 +578,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-08.jpg",
+    imgH: 1202,
+    imgW: 903,
     group: "recent"
   },
   {
@@ -485,6 +589,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-09.jpg",
+    imgH: 1196,
+    imgW: 982,
     group: "recent"
   },
   {
@@ -494,6 +600,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-10.jpg",
+    imgH: 1188,
+    imgW: 975,
     group: "recent"
   },
   {
@@ -503,6 +611,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-11.jpg",
+    imgH: 1208,
+    imgW: 987,
     group: "recent"
   },
   {
@@ -512,6 +622,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-12.jpg",
+    imgH: 1205,
+    imgW: 993,
     group: "recent"
   },
   {
@@ -521,6 +633,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-13.jpg",
+    imgH: 1191,
+    imgW: 980,
     group: "recent"
   },
   {
@@ -530,6 +644,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-14.jpg",
+    imgH: 1179,
+    imgW: 958,
     group: "recent"
   },
   {
@@ -539,6 +655,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-15.jpg",
+    imgH: 1200,
+    imgW: 976,
     group: "recent"
   },
   {
@@ -548,6 +666,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-16.jpg",
+    imgH: 1156,
+    imgW: 952,
     group: "recent"
   },
   {
@@ -557,6 +677,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-17.jpg",
+    imgH: 1193,
+    imgW: 982,
     group: "recent"
   },
   {
@@ -566,6 +688,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-18.jpg",
+    imgH: 1200,
+    imgW: 990,
     group: "recent"
   },
   {
@@ -575,6 +699,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-19.jpg",
+    imgH: 1185,
+    imgW: 971,
     group: "recent"
   },
   {
@@ -584,6 +710,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-20.jpg",
+    imgH: 1190,
+    imgW: 969,
     group: "recent"
   },
   {
@@ -593,6 +721,8 @@ const posts = [
     width: 0,
     materials: "",
     img: "artwork/new-work-21.jpg",
+    imgH: 1197,
+    imgW: 974,
     group: "recent"
   }
 ];

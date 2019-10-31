@@ -4,6 +4,28 @@
   import { heading } from "../theme";
   import { cloudinaryBase } from "../config";
   let w;
+  const series = [
+    {
+      title: "new work",
+      href: "new-work",
+      img: "new-work-03.jpg"
+    },
+    {
+      title: "work on paper",
+      href: "work-on-paper",
+      img: "the-light-for-grace.jpg"
+    },
+    {
+      title: "mixed media",
+      href: "mixed-media",
+      img: "empress.jpg"
+    },
+    {
+      title: "miscellaneous",
+      href: "miscellaneous",
+      img: "dance-5.jpg"
+    }
+  ];
 </script>
 
 <svelte:head>
@@ -14,22 +36,13 @@
   <section class="mb-4 w-full">
     <h3 class={heading}>View Series</h3>
     <div class="w-full" bind:clientWidth={w}>
-      <SeriesCover
-        title="new work"
-        href="/new-work"
-        src="{cloudinaryBase({ w })}artwork/new-work-03.jpg" />
-      <SeriesCover
-        title="work on paper"
-        href="/work-on-paper"
-        src="{cloudinaryBase({ w })}artwork/the-light-for-grace.jpg" />
-      <SeriesCover
-        title="mixed media"
-        href="/mixed-media"
-        src="{cloudinaryBase({ w })}artwork/empress.jpg" />
-      <SeriesCover
-        title="miscellaneous"
-        href="/miscellaneous"
-        src="{cloudinaryBase({ w })}artwork/dance-5.jpg" />
+      {#each series as { title, href, img }}
+        <SeriesCover
+          {title}
+          {href}
+          src="{cloudinaryBase({ w })}artwork/{img}" />
+      {/each}
+      }
     </div>
   </section>
 </Wrapper>
