@@ -7,11 +7,9 @@
       });
   }
   // this is a hidden page
-  let title = "art";
 </script>
 
 <script>
-  import Feed from "../../components/Feed.svelte";
   export let posts;
 </script>
 
@@ -19,4 +17,11 @@
   <title>Artwork</title>
 </svelte:head>
 
-<Feed {posts} {title} />
+<section class="pt-2 text-gray-500 text-center">
+  <h3 class="font-xl font-semibold pb-2">All Artwork</h3>
+  {#each posts as { img, title, slug }}
+    <div class="py-2">
+      <a rel="prefetch" href="art/{slug}">{title}</a>
+    </div>
+  {/each}
+</section>
