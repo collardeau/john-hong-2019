@@ -12,12 +12,12 @@
   };
 </script>
 
-<section>
+<section class="mb-6">
   <h3 class={heading}>series: {title}</h3>
   <LazyLoadContainer>
-    {#each posts as { img, title, slug, imgH, imgW }}
+    {#each posts as { img, title, slug, imgH, imgW }, i}
       <LazyLoad id={slug}>
-        <article class="mb-6" bind:clientWidth={w}>
+        <article class:pt-6={i} bind:clientWidth={w}>
           <Img {w} {img} h={getHeight(w, imgH, imgW)} alt={title} />
           <section
             class="bg-gray-800 text-white p-4 pr-2 flex justify-between
