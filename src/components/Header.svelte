@@ -20,7 +20,7 @@
 
     {
       href: "miscellaneous",
-      name: "Miscelleneous"
+      name: "Miscellaneous"
     },
     {
       href: "about",
