@@ -12,24 +12,25 @@
   };
 </script>
 
-<section>
+<section class="mb-6">
   <h3 class={heading}>series: {title}</h3>
   <LazyLoadContainer>
-    {#each posts as { img, title, slug, imgH, imgW }}
+    {#each posts as { img, title, slug, imgH, imgW }, i}
       <LazyLoad id={slug}>
-        <article class="mb-6" bind:clientWidth={w}>
+        <article class:pt-6={i} bind:clientWidth={w}>
           <Img {w} {img} h={getHeight(w, imgH, imgW)} alt={title} />
           <section
-            class="bg-gray-800 text-white p-4 pr-2 flex justify-between
+            class="bg-gray-800 text-gray-300 p-2 md:p-4 flex justify-between
             items-center">
-            <h5 class="uppercase font-medium tracking-wide font-medium ">
+            <h5
+              class="uppercase font-medium tracking-wider text-sm sm:text-base">
               {title}
             </h5>
             <div>
               <a
                 rel="prefetch"
                 href="art/{slug}"
-                class="text-gray-500 hover:text-white block w-8 h-8 p-1 {outline}">
+                class="text-gray-600 hover:text-white block w-8 h-8 p-1 {outline}">
                 <svg
                   class="fill-current"
                   xmlns="http://www.w3.org/2000/svg"

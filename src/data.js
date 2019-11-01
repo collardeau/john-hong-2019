@@ -295,6 +295,61 @@ const posts = [
   //   group: "misc"
   // },
   {
+    title: "Dance 10",
+    slug: "dance-10",
+    height: 0,
+    width: 0,
+    materials: "ink on paper",
+    img: "artwork/dance-10.jpg",
+    imgH: 1280,
+    imgW: 960,
+    group: "misc"
+  },
+  {
+    title: "Dance 11",
+    slug: "dance-11",
+    height: 0,
+    width: 0,
+    materials: "ink on paper",
+    img: "artwork/dance-11.jpg",
+    imgH: 1280,
+    imgW: 960,
+    group: "misc"
+  },
+  {
+    title: "Dance 12",
+    slug: "dance-12",
+    height: 0,
+    width: 0,
+    materials: "ink on paper",
+    img: "artwork/dance-12.jpg",
+    imgH: 1280,
+    imgW: 960,
+    group: "misc"
+  },
+  {
+    title: "Dance 13",
+    slug: "dance-13",
+    height: 0,
+    width: 0,
+    materials: "ink on paper",
+    img: "artwork/dance-13.jpg",
+    imgH: 1106,
+    imgW: 1125,
+    group: "misc"
+  },
+  {
+    title: "Dance 14",
+    slug: "dance-14",
+    height: 0,
+    width: 0,
+    materials: "ink on paper",
+    img: "artwork/dance-14.jpg",
+    imgH: 1280,
+    imgW: 966,
+    group: "misc"
+  },
+  {
     title: "Dance 2",
     slug: "dance-2",
     height: 12,
@@ -382,61 +437,7 @@ const posts = [
     imgW: 1024,
     group: "misc"
   },
-  {
-    title: "Dance 10",
-    slug: "dance-10",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-10.jpg",
-    imgH: 1280,
-    imgW: 960,
-    group: "misc"
-  },
-  {
-    title: "Dance 11",
-    slug: "dance-11",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-11.jpg",
-    imgH: 1280,
-    imgW: 960,
-    group: "misc"
-  },
-  {
-    title: "Dance 12",
-    slug: "dance-12",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-12.jpg",
-    imgH: 1280,
-    imgW: 960,
-    group: "misc"
-  },
-  {
-    title: "Dance 13",
-    slug: "dance-13",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-13.jpg",
-    imgH: 1106,
-    imgW: 1125,
-    group: "misc"
-  },
-  {
-    title: "Dance 14",
-    slug: "dance-14",
-    height: 0,
-    width: 0,
-    materials: "ink on paper",
-    img: "artwork/dance-14.jpg",
-    imgH: 1280,
-    imgW: 966,
-    group: "misc"
-  },
+
   {
     title: "Sing 1",
     slug: "sing-1",
@@ -471,17 +472,6 @@ const posts = [
     group: "misc"
   },
   {
-    title: "Kitchen Tiles",
-    slug: "kitchen",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/kitchen-2.jpg",
-    imgH: 960,
-    imgW: 1280,
-    group: "misc"
-  },
-  {
     title: "Untitled 2",
     slug: "untitled-2",
     height: 29,
@@ -492,16 +482,49 @@ const posts = [
     imgW: 640,
     group: "misc"
   },
-
-  // NEW WORK
   {
-    title: "New Work 3",
-    slug: "new-work-3",
+    title: "Kitchen Tiles",
+    slug: "kitchen",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-03.jpg",
-    imgH: 1185,
+    img: "artwork/kitchen-2.jpg",
+    imgH: 960,
+    imgW: 1280,
+    group: "misc"
+  },
+
+  // NEW WORK
+  {
+    title: "New Work 14",
+    slug: "new-work-14",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "artwork/new-work-14.jpg",
+    imgH: 1179,
+    imgW: 958,
+    group: "recent"
+  },
+  {
+    title: "New Work 13",
+    slug: "new-work-13",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "artwork/new-work-13.jpg",
+    imgH: 1191,
+    imgW: 980,
+    group: "recent"
+  },
+  {
+    title: "New Work 15",
+    slug: "new-work-15",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "artwork/new-work-15.jpg",
+    imgH: 1200,
     imgW: 976,
     group: "recent"
   },
@@ -525,6 +548,17 @@ const posts = [
     img: "artwork/new-work-02.jpg",
     imgH: 1201,
     imgW: 923,
+    group: "recent"
+  },
+  {
+    title: "New Work 3",
+    slug: "new-work-3",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "artwork/new-work-03.jpg",
+    imgH: 1185,
+    imgW: 976,
     group: "recent"
   },
   {
@@ -624,39 +658,6 @@ const posts = [
     img: "artwork/new-work-12.jpg",
     imgH: 1205,
     imgW: 993,
-    group: "recent"
-  },
-  {
-    title: "New Work 13",
-    slug: "new-work-13",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-13.jpg",
-    imgH: 1191,
-    imgW: 980,
-    group: "recent"
-  },
-  {
-    title: "New Work 14",
-    slug: "new-work-14",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-14.jpg",
-    imgH: 1179,
-    imgW: 958,
-    group: "recent"
-  },
-  {
-    title: "New Work 15",
-    slug: "new-work-15",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-15.jpg",
-    imgH: 1200,
-    imgW: 976,
     group: "recent"
   },
   {
