@@ -12,19 +12,22 @@
     background-color: hsla(220, 26%, 14%, 0.5);
     height: 33%;
   }
+  .dark-bg {
+    background-color: hsla(220, 26%, 14%, 0.95);
+  }
   .misc {
     object-position: center 52%;
   }
 </style>
 
-<a {href} class="block {outline} mb-3 sm:mb-4 xl:mb-6">
+<a {href} class="block {outline} mb-2 sm:mb-3 xl:mb-4">
   <div class="relative h-64">
     <img {src} {alt} class:misc class="object-cover w-full h-full" />
     <div class="bg absolute w-full bottom-0">
       <div class="flex flex-row-reverse -mt-4 pl-6">
         <span
-          class="bg-gray-900 rounded py-2 px-4 mr-8 text-white font-medium
-          tracking-wider uppercase">
+          class="dark-bg py-2 px-4 mr-8 text-white font-medium tracking-wider
+          uppercase">
           {title}
         </span>
       </div>

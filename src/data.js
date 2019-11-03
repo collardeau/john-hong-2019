@@ -349,17 +349,17 @@ const posts = [
     imgW: 966,
     group: "misc"
   },
-  {
-    title: "Dance 2",
-    slug: "dance-2",
-    height: 12,
-    width: 9,
-    materials: "ink on paper",
-    img: "artwork/dance-2.jpg",
-    imgH: 1371,
-    imgW: 1024,
-    group: "misc"
-  },
+  // {
+  //   title: "Dance 2",
+  //   slug: "dance-2",
+  //   height: 12,
+  //   width: 9,
+  //   materials: "ink on paper",
+  //   img: "artwork/dance-2.jpg",
+  //   imgH: 1371,
+  //   imgW: 1024,
+  //   group: "misc"
+  // },
   {
     title: "Dance 3",
     slug: "dance-3",

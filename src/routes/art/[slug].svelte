@@ -45,7 +45,7 @@
 <Wrapper>
   {#if show}
     <section
-      class="mt-4 sm:mt-12 pb-20 text-center w-full"
+      class="mt-4 sm:mt-12 pb-20 text-center w-full sm:flex sm:justify-around"
       in:fade={{ duration: 400, delay: 100 }}
       out:fade={{ duration: 100 }}>
       <div bind:clientWidth={w}>
@@ -54,15 +54,19 @@
           src="{cloudinaryBase({ w })}{post.img}"
           alt={post.title} />
       </div>
-      <div class="pt-2">
-        <h3 class="py-2 text-white uppercase text-lg font-medium">
+      <div class="pt-5 sm:order-first">
+        <h3 class="py-2 text-gray-100 uppercase tracking-wider">
           {post.title}
         </h3>
         <div class="text-gray-500 text-sm">
-          <p class="capitalize">{post.materials}</p>
-          <p class="">
-            {post.width} x {post.height} in{post.each ? ' each' : ''}
-          </p>
+          {#if post.materials}
+            <p class="capitalize">{post.materials}</p>
+          {/if}
+          {#if post.width}
+            <p class="mt-1">
+              {post.each ? 'each ' : ''}{post.width} x {post.height} inches
+            </p>
+          {/if}
         </div>
       </div>
     </section>
@@ -70,7 +74,7 @@
 </Wrapper>
 
 <nav
-  class="text-gray-200 bg-gray-800 py-2 fixed bottom-0 left-0 w-full flex
+  class="text-gray-200 bg-gray-800 py-1 fixed bottom-0 left-0 w-full flex
   justify-around">
   <div class="h-10 w-10">
     <a

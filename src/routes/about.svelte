@@ -41,7 +41,7 @@
   {/if}
 </section>
 
-<section class="bg-gray-100 p-4">
+<section class="bg-gray-100 p-4 pb-6">
   <h3 class="font-semibold">Artist Statement</h3>
   <p>
     My work is like a song. You can feel what it says before you know what it
@@ -97,6 +97,11 @@
       @johnhong.studio
     </a>
   </p>
+  <h3 class="font-semibold mt-4">Website by</h3>
+  <p>
+    <a href="https://twitter.com/collardeau" class="text-blue-700">
+      @collardeau
+    </a>
+  </p>
   <p class="mt-4 font-medium">Thank you for visiting John Hong Studio!</p>
-
 </section>

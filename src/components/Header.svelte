@@ -71,7 +71,8 @@
   {#if isOpen}
     <nav
       transition:slide={{ duration: 350 }}
-      class="px-2 pb-4 mt-2 absolute right-0 w-full z-10 bg-gray-800">
+      class="px-2 pb-4 mt-2 absolute right-0 w-full z-10 bg-gray-800
+      text-gray-400">
       <a href="art" class="hidden">Artwork</a>
       {#each links as { href, name }}
         {#if segment === href}

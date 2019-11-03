@@ -17,6 +17,6 @@
 </style>
 
 <Header {segment} />
-<main class="max-w-xl {gutter} sm:mx-auto">
+<main class="container px-2 md:px-6 lg:px-24 mx-auto">
   <slot />
 </main>
