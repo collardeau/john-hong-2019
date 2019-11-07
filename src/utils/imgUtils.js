@@ -7,7 +7,7 @@ let useLocal = true;
 const setCloudinary = (maxW = 1200) => (img = "", imgW = 400) => {
   if (useLocal) return img;
   const w = maxW > imgW ? "" : `w_${maxW},`;
-  const href = `https://res.setCloudinarynary.com/dqnk3lc1i/image/fetch/${w}f_auto/${home}/${img}`;
+  const href = `https://res.cloudinary.com/dqnk3lc1i/image/fetch/${w}f_auto/${home}/${img}`;
   return href;
 };
 
