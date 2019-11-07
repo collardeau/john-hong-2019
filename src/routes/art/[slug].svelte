@@ -31,12 +31,12 @@
     <div
       in:fade={{ duration: 400, delay: 100 }}
       out:fade={{ duration: 100 }}
-      class="col flex-1 mb-12 ">
+      class="col flex-1 mb-12 lg:mb-16">
       <Art {artwork} />
     </div>
   {/if}
 </Wrapper>
 
-<div class="flex fixed bottom-0 left-0 w-full h-12">
+<div class="flex fixed bottom-0 left-0 w-full h-12 lg:h-16">
   <Nav {hide} next={data.next} prev={data.prev} />
 </div>

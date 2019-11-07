@@ -2,10 +2,13 @@
   export let artwork = {};
 </script>
 
-<div class="col flex-1 py-4 text-center items-center">
-  <section class="col flex-1 justify-center">
-    <h3 class="text-gray-100 uppercase tracking-wider">{artwork.title}</h3>
-    <div class="text-gray-500 text-sm">
+<div class="col py-4 text-center">
+  <section class="col justify-center">
+    <h3
+      class="mb-2 text-gray-100 uppercase tracking-wider md:text-xl lg:text-2xl">
+      {artwork.title}
+    </h3>
+    <div class="text-gray-500 text-sm md:text-base">
       {#if artwork.materials}
         <p class="capitalize">{artwork.materials}</p>
       {/if}

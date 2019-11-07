@@ -17,13 +17,13 @@
 </section>
 
 <section class={desktop}>
-  <div class="flex items-center flex-1 m-4 lg:m-12" bind:clientHeight={h}>
-    <div class="flex w-1/3">
+  <div class="flex items-center flex-1 mx-4 mb-16 mt-12" bind:clientHeight={h}>
+    <div class="w-1/3">
       <Info {artwork} />
     </div>
     <div class="col w-2/3" bind:clientWidth={w}>
       {#if maxW}
-        <div style="width: {maxW}px">
+        <div class="self-end" style="width: {maxW}px">
           <img {src} {alt} class="cover" />
         </div>
       {/if}
