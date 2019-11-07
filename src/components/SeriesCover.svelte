@@ -1,9 +1,14 @@
 <script>
   import { outline } from "../theme";
+  import { getHref } from "../utils/imgUtils";
   export let title = "series";
-  export let src = "";
-  export let href = "#";
+  export let href = "";
+  export let img = "";
+  export let imgW = 0;
   export let alt = "cover image";
+  export let h;
+  const src = getHref(img, imgW);
+
   $: misc = title === "miscellaneous";
 </script>
 
@@ -20,17 +25,11 @@
   }
 </style>
 
-<a {href} class="block {outline} mb-2 sm:mb-3 xl:mb-4">
-  <div class="relative h-64">
-    <img {src} {alt} class:misc class="object-cover w-full h-full" />
-    <div class="bg absolute w-full bottom-0">
-      <div class="flex flex-row-reverse -mt-4 pl-6">
-        <span
-          class="dark-bg py-2 px-4 mr-8 text-white font-medium tracking-wider
-          uppercase">
-          {title}
-        </span>
-      </div>
+<a {href} class="block relative {outline}" style="height:{h};">
+  <img {src} {alt} class:misc class="cover" />
+  <div class="bg absolute w-full bottom-0">
+    <div class="reverse -mt-4 pl-6">
+      <span class="py-2 px-4 mr-8 dark-bg series-title">{title}</span>
     </div>
   </div>
 </a>

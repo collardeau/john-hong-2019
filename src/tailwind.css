@@ -1,3 +1,25 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+
+@tailwind components;
+
+.col {
+  @apply flex flex-col flex-1;
+}
+
+.max-width {
+  @apply max-w-xl mx-auto;
+}
+
+.cover {
+  @apply object-cover w-full h-full;
+}
+
+.reverse {
+  @apply flex flex-row-reverse;
+}
+
+.series-title {
+  @apply text-white font-medium tracking-wider uppercase;
+}
+
+@tailwind utilities;

@@ -1,22 +1,26 @@
 <script>
+  import { setMaxWidth } from "../utils/imgUtils";
   import Header from "../components/Header.svelte";
   export let segment;
-  $: gutter = segment === "about" ? "mx-0" : "mx-2"; // dynamic class
+
+  let containerW;
+  $: containerW && setMaxWidth(containerW); // max size for img reqs
 </script>
 
 <style>
   :global(body) {
-    font-family: futura;
+    font-family: futura, arial, sans-serif;
     background-color: #1a202c;
-    /* background-color: #2d3748; */
-    /* background-color: #4a5568; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #1a202c;
   }
 </style>
 
-<Header {segment} />
-<main class="container px-2 md:px-6 lg:px-24 mx-auto">
-  <slot />
-</main>
+<div class="col min-h-screen antialiased text-gray-300">
+  <Header {segment} />
+  <main
+    class="col container mx-auto px-2 md:px-0"
+    bind:clientWidth={containerW}>
+    {#if containerW}
+      <slot />
+    {/if}
+  </main>
+</div>

@@ -1,0 +1,40 @@
+<script>
+  import NextSVG from "../../components/svgs/Next.svelte";
+  import PrevSVG from "../../components/svgs/Prev.svelte";
+  import { outline } from "../../theme";
+  export let hide;
+  export let prev;
+  export let next;
+
+  $: prevHref = `/art/${prev}`;
+  $: nextHref = `/art/${next}`;
+
+  const handleKeydown = e => {
+    if (e.keyCode === 39) {
+      window.location.href = nextHref;
+    }
+    if (e.keyCode === 37) {
+      window.location.href = prevHref;
+    }
+  };
+</script>
+
+<svelte:window on:keydown={handleKeydown} />
+
+<nav class="bg-gray-800 flex justify-around items-center flex-1">
+  {#each [prevHref, nextHref] as href, i}
+    <div class="h-10 w-10">
+      <a
+        {href}
+        on:click={hide}
+        rel="prefetch"
+        class="block p-2 text-gray-500 hover:text-white {outline}">
+        {#if !i}
+          <PrevSVG />
+        {:else}
+          <NextSVG />
+        {/if}
+      </a>
+    </div>
+  {/each}
+</nav>

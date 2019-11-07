@@ -1,30 +1,31 @@
 <script>
   import Wrapper from "../components/TransitionWrapper.svelte";
   import SeriesCover from "../components/SeriesCover.svelte";
-  import { heading } from "../theme";
-  import { cloudinaryBase } from "../config";
-  let w;
   const series = [
     {
       title: "new work",
       href: "new-work",
-      img: "new-work-14.jpg"
+      img: "artwork/new-work-14.jpg",
+      imgW: 958
     },
     {
       title: "mixed media",
       href: "mixed-media",
-      img: "empress.jpg"
+      img: "artwork/empress.jpg",
+      imgW: 1024
     },
     {
       title: "work on paper",
       href: "work-on-paper",
-      img: "the-light-for-grace.jpg"
+      img: "artwork/the-light-for-grace.jpg",
+      imgW: 954
     },
 
     {
       title: "miscellaneous",
       href: "miscellaneous",
-      img: "dance-10.jpg"
+      img: "artwork/dance-10.jpg",
+      imgW: 960
     }
   ];
 </script>
@@ -34,16 +35,16 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="w-full mt-3">
-    <!-- <h3 class={heading}>View Series</h3> -->
-    <div class="w-full" bind:clientWidth={w}>
-      {#each series as { title, href, img }}
-        <SeriesCover
-          {title}
-          {href}
-          src="{cloudinaryBase({ w })}artwork/{img}" />
-      {/each}
-      }
-    </div>
-  </section>
+  <div class="my-2 md:flex flex-1">
+    {#each series as serie}
+      <div class="md:hidden mb-2">
+        <SeriesCover {...serie} h="40vh" />
+      </div>
+      <div class="hidden md:flex">
+        <div class="col mx-2 justify-center">
+          <SeriesCover {...serie} h="50%" />
+        </div>
+      </div>
+    {/each}
+  </div>
 </Wrapper>

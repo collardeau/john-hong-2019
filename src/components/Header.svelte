@@ -49,6 +49,7 @@
         <span class="pl-2">{title}</span>
       {/if}
     </h1>
+
     <button
       type="button"
       class="block w-8 h-8 sm:w-10 sm:h-10 p-2 text-gray-400 hover:text-white {outline}"
