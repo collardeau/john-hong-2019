@@ -21,10 +21,10 @@ export function calcMaxW(img, h, w) {
   if (imgW < w && imgH < h) {
     return imgW;
   }
+  const imgRatio = imgW / imgH;
   if (imgW > w && imgH > h) {
     const wOffBy = imgW / w;
     const hOffBy = imgH / h;
-    const imgRatio = imgW / imgH;
     if (wOffBy > hOffBy) {
       return w;
     }
