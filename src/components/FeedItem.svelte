@@ -4,11 +4,20 @@
   import { outline, heading } from "../theme";
 
   export let item = {};
-  $: src = getHref(item.img, item.imgW);
+  const { img, imgW, imgH } = item;
+  const src = getHref(img, imgW);
+
+  let w;
+  // give initial height (based on image size) for lazy loading
+  $: h = !w ? 0 : Math.round((imgH / imgW) * w);
 </script>
 
-<article>
-  <img {src} alt={item.slug} />
+<article bind:clientWidth={w}>
+  {#if h}
+    <div style="height: {h}px;">
+      <img {src} alt={item.slug} />
+    </div>
+  {/if}
   <section
     class="bg-gray-800 p-2 pl-3 md:p-4 flex justify-between items-center">
     <h5 class="series-title text-sm sm:text-base">{item.title}</h5>

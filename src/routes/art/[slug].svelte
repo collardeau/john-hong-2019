@@ -31,7 +31,7 @@
     <div
       in:fade={{ duration: 400, delay: 100 }}
       out:fade={{ duration: 100 }}
-      class="col flex-1 mb-12 lg:mb-16">
+      class="col flex-1 mx-2 mb-12 lg:mb-16">
       <Art {artwork} />
     </div>
   {/if}

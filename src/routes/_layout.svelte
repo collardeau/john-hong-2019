@@ -16,9 +16,7 @@
 
 <div class="col min-h-screen antialiased text-gray-300">
   <Header {segment} />
-  <main
-    class="col container mx-auto px-2 md:px-0"
-    bind:clientWidth={containerW}>
+  <main class="col container mx-auto" bind:clientWidth={containerW}>
     {#if containerW}
       <slot />
     {/if}

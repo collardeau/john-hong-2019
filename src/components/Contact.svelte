@@ -53,7 +53,7 @@
 </script>
 
 <form name="contact" data-netlify="true" on:submit={onSubmit}>
-  <div class="flex justify-between items-center pb-2">
+  <div class="flex justify-between items-center pb-2 lg:pb-8">
     <label class="w-1/3" for="name">Your Name:</label>
     <input
       class="{outline} flex-1 p-2"
@@ -63,7 +63,7 @@
       id="name"
       placeholder="your name here" />
   </div>
-  <div class="flex justify-between items-center pb-2">
+  <div class="flex justify-between items-center pb-2 lg:pb-8">
     <label class="w-1/3" for="email">Your Email:</label>
     <input
       class="{outline} flex-1 p-2"
@@ -74,7 +74,7 @@
       placeholder="your email here" />
   </div>
   <div>
-    <label class="block pt-2 pb-2" for="message">Your Message:</label>
+    <label class="block py-2" for="message">Your Message:</label>
     <textarea
       class="{outline} w-full p-2 h-48"
       name="message"
@@ -82,10 +82,10 @@
       id="message"
       placeholder="your message here" />
   </div>
-  <div class="mt-4">
+  <div class="mt-4 lg:mt-5">
     <button
       {disabled}
-      class="{outline} w-full py-2 rounded {disabled ? disabledBtn : enabledBtn}"
+      class="{outline} w-full py-2 lg:py-3 rounded {disabled ? disabledBtn : enabledBtn}"
       type="submit">
       Submit
     </button>

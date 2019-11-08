@@ -35,14 +35,14 @@
 </svelte:head>
 
 <Wrapper>
-  <div class="my-2 md:flex flex-1">
+  <div class="my-2 px-2 lg:flex flex-1">
     {#each series as serie}
-      <div class="md:hidden mb-2">
-        <SeriesCover {...serie} h="40vh" />
+      <div class="lg:hidden max-w-xl mx-auto mb-2">
+        <SeriesCover {...serie} />
       </div>
-      <div class="hidden md:flex">
-        <div class="col mx-2 justify-center">
-          <SeriesCover {...serie} h="50%" />
+      <div class="hidden lg:flex mb-24 bo">
+        <div class="col mx-3 justify-center">
+          <SeriesCover {...serie} />
         </div>
       </div>
     {/each}

@@ -6,16 +6,32 @@
   export let img = "";
   export let imgW = 0;
   export let alt = "cover image";
-  export let h;
+
   const src = getHref(img, imgW);
 
   $: misc = title === "miscellaneous";
 </script>
 
 <style>
+  a {
+    height: 40vh;
+  }
   .bg {
     background-color: hsla(220, 26%, 14%, 0.5);
     height: 33%;
+  }
+  /* @media (min-width: 768px) {
+    a {
+      height: 36vh;
+    }
+  } */
+  @media (min-width: 1024px) {
+    a {
+      height: 60%;
+    }
+    .bg {
+      height: 20%;
+    }
   }
   .dark-bg {
     background-color: hsla(220, 26%, 14%, 0.95);
@@ -25,7 +41,7 @@
   }
 </style>
 
-<a {href} class="block relative {outline}" style="height:{h};">
+<a {href} class="block relative {outline}">
   <img {src} {alt} class:misc class="cover" />
   <div class="bg absolute w-full bottom-0">
     <div class="reverse -mt-4 pl-6">
