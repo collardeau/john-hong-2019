@@ -74,7 +74,6 @@
       transition:slide={{ duration: 350 }}
       class="px-2 pb-4 mt-2 absolute right-0 w-full z-10 bg-gray-800
       text-gray-400">
-      <a href="art" class="hidden">Artwork</a>
       {#each links as { href, name }}
         {#if segment === href}
           <span class="block p-2 mb-2 text-gray-600">{name}</span>
@@ -104,8 +103,6 @@
     {/if}
   </h1>
   <nav>
-    <!-- hidden link for static export -->
-    <a href="art" class="hidden">artwork</a>
     {#each links as { href, name }}
       {#if segment === href}
         <span class="p-2 ml-4 text-gray-600">{name}</span>
