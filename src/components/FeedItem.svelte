@@ -1,7 +1,7 @@
 <script>
   import ChevronRight from "./svgs/ChevronRight.svelte";
   import { getHref } from "../utils/imgUtils";
-  import { outline, heading } from "../theme";
+  import { outline } from "../theme";
 
   export let item = {};
   const { img, imgW, imgH } = item;

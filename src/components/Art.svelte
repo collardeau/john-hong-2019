@@ -1,22 +1,20 @@
 <script>
   import Info from "./ArtInfo.svelte";
   import { getHref, calcMaxW } from "../utils/imgUtils";
-  import { mobile, desktop } from "../theme";
   export let artwork;
   $: alt = artwork.title;
   $: img = artwork.img;
   let h, w;
-
   $: src = getHref(artwork.img, artwork.imgW);
   $: maxW = calcMaxW(artwork, h, w);
 </script>
 
-<section class="{mobile} mt-4">
+<section class="col flex-1 md:hidden mt-4">
   <img {src} {alt} class="cover" />
   <Info {artwork} />
 </section>
 
-<section class={desktop}>
+<section class="hidden md:flex md:flex-col md:flex-1">
   <div class="flex items-center flex-1 mb-16 mt-12" bind:clientHeight={h}>
     <div class="w-1/3">
       <Info {artwork} />

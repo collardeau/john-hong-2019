@@ -1,7 +1,6 @@
 <script>
   import { LazyLoadContainer, LazyLoad } from "svelte-lazyload";
   import FeedItem from "./FeedItem.svelte";
-  import { heading } from "../theme";
   export let posts = [];
   export let title = "";
 
@@ -30,7 +29,7 @@
       <div class="block md:hidden">
         {#each posts as item, i}
           <LazyLoad id={item.slug}>
-            <div class:pt-5={i}>
+            <div class:pt-4={i}>
               <FeedItem {item} />
             </div>
           </LazyLoad>
