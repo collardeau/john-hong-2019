@@ -18,7 +18,7 @@
 <div class="max-wih lg:flex">
   <section class="bg-gray-500 text-gray-900 p-3 pl-4 lg:w-1/3">
     <div class="flex justify-between items-center">
-      <h3 class="font-semibold lg:mb-8">Contact John</h3>
+      <h3 class="font-semibold lg:mb-8">Get in Touch</h3>
       <button type="button" class="w-6 h-6 lg:hidden" on:click={toggleForm}>
         {#if showContact}
           <ChevronUp />
