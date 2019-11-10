@@ -8,7 +8,7 @@
   const { img, imgW, imgH } = item;
   const href = getHref(img, imgW);
 
-  let src = lazy && "IntersectionObserver" in window ? "" : getHref(img, imgW);
+  let src = lazy && "IntersectionObserver" in window ? "" : href;
   let w;
   // give initial height (based on image size) for lazy loading
   $: h = !w ? 0 : Math.round((imgH / imgW) * w);
@@ -20,7 +20,7 @@
   };
 
   const observer = new IntersectionObserver(onIntersect, {
-    rootMargin: "500px"
+    rootMargin: "450px"
   });
 
   function lazyImg(node) {
@@ -32,7 +32,7 @@
 <article bind:clientWidth={w} use:lazyImg>
   {#if h}
     <div style="height: {h}px;">
-      <img {src} data-src={src} alt={item.slug} />
+      <img {src} alt={item.slug} />
     </div>
   {/if}
   <section
