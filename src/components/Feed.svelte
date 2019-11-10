@@ -11,17 +11,23 @@
 <section class="max-w-5xl mx-auto mb-5 ">
   <div class="mx-2 mx-0">
     <h3 class="py-4 mx-2 capitalize text-lg">series: {title}</h3>
-    <LazyLoadContainer>
-      <div class="block md:hidden">
-        {#each posts as item, i}
+
+    <div class="block md:hidden">
+      {#each posts.slice(0, 3) as item, i}
+        <div class:pt-4={i}>
+          <FeedItem {item} />
+        </div>
+      {/each}
+      <LazyLoadContainer>
+        {#each posts.slice(3) as item, i}
           <LazyLoad id={item.slug}>
-            <div class:pt-4={i}>
+            <div class="pt-4">
               <FeedItem {item} />
             </div>
           </LazyLoad>
         {/each}
-      </div>
-    </LazyLoadContainer>
+      </LazyLoadContainer>
+    </div>
 
     <div class="hidden md:flex">
       {#each cols as c}
