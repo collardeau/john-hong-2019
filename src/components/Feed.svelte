@@ -1,25 +1,11 @@
 <script>
   import { LazyLoadContainer, LazyLoad } from "svelte-lazyload";
   import FeedItem from "./FeedItem.svelte";
+  import { makeCols } from "../utils/postsUtils";
   export let posts = [];
   export let title = "";
 
-  $: half = Math.ceil(posts.length / 2);
-  $: cols = posts.reduce(
-    (acc, next, i) => {
-      const [col1, col2] = acc;
-      if (title === "work on paper") {
-        // move piece before half to second col
-        if (i === half - 1) return [[...col1], [...col2, next]];
-      }
-      if ((i + 2) % 2) {
-        return [[...col1], [...col2, next]];
-      } else {
-        return [[...col1, next], [...col2]];
-      }
-    },
-    [[], []]
-  );
+  $: cols = makeCols(posts, title);
 </script>
 
 <section class="max-w-5xl mx-auto mb-5 ">
