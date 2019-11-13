@@ -2,10 +2,9 @@
   export let artwork = {};
 </script>
 
-<div class="col py-4 text-center">
-  <section class="col justify-center">
-    <h3
-      class="mb-2 text-gray-100 uppercase tracking-wider md:text-xl lg:text-2xl">
+<div class="col text-center">
+  <section class="col justify-ceter">
+    <h3 class="mb-2 text-gray-100 uppercase tracking-wider md:text-xl">
       {artwork.title}
     </h3>
     <div class="text-gray-500 text-sm md:text-base">

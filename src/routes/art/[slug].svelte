@@ -18,15 +18,15 @@
   import { artStore } from "../../stores";
   export let data;
   let show = false;
-  $: artwork = data.post;
+  $: art = data.post;
   $: show = !!data.post;
 
-  $: artStore.merge([artwork]);
+  $: artStore.merge([art]);
   const hide = () => (show = false);
 </script>
 
 <svelte:head>
-  <title>{artwork.title}</title>
+  <title>{art.title}</title>
 </svelte:head>
 
 <Wrapper>
@@ -35,7 +35,7 @@
       in:fade={{ duration: 400, delay: 100 }}
       out:fade={{ duration: 100 }}
       class="col flex-1 mx-2 mb-12 lg:mb-16">
-      <Art {artwork} />
+      <Art {art} />
     </div>
   {/if}
 </Wrapper>

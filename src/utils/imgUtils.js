@@ -1,8 +1,7 @@
-export function calcMaxW(img, h, w) {
-  if (!img || !h || !w) return 0;
+export function calcMaxW(img = { imgH: 0, imgW: 0 }, h, w) {
   const { imgH, imgW } = img;
+  if (!imgH || !imgW || !h || !w) return 0;
   if (imgW < w && imgH < h) {
-    // console.log('image is smaller on both sides)
     return imgW;
   }
   const imgRatio = imgW / imgH;
@@ -22,8 +21,7 @@ export function calcMaxW(img, h, w) {
     return h * imgRatio;
   }
   if (imgW > w) {
-    // kitchen tiles for example
-    // console.log("only the width is bigger");
-    return w;
+    // kitchen styles for example, young john on mobile
+    return w > 1024 ? 1024 : w;
   }
 }

@@ -1,33 +1,46 @@
 <script>
-  import Info from "./ArtInfo.svelte";
+  import ArtInfo from "./ArtInfo.svelte";
   import { images } from "../stores";
   import { calcMaxW } from "../utils/imgUtils";
-  export let artwork;
-  $: alt = artwork.title;
-  $: img = artwork.img;
-  let h, w;
+  export let art;
 
-  $: image = $images[artwork.slug];
+  let containerW, containerH;
+  $: title = art.title;
+  $: image = $images[art.slug];
   $: src = image.url;
-  $: maxW = calcMaxW(artwork, h, w);
+  $: displayW = calcMaxW(art, containerH, containerW);
+  $: displayH = Math.round(displayW * image.imgRatio);
+  $: deltaH = containerH - displayH;
+  $: enoughVerticalSpace = deltaH > 150;
+  $: horizontal = containerW > 768 && !enoughVerticalSpace;
+  $: vertical = !horizontal;
 </script>
 
-<section class="col flex-1 lg:hidden mt-4">
-  <img {src} {alt} />
-  <Info {artwork} />
-</section>
+<style>
+  .horizontal {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .vertical {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+</style>
 
-<section class="hidden lg:flex lg:flex-col lg:flex-1">
-  <div class="flex items-center flex-1 mb-16 mt-12" bind:clientHeight={h}>
-    <div class="w-1/3">
-      <Info {artwork} />
+<section
+  class="flex-1 w-full flex items-center my-0 md:my-4"
+  class:horizontal
+  class:vertical
+  bind:clientWidth={containerW}
+  bind:clientHeight={containerH}>
+  {#if containerH && containerW}
+    <div style="with:{displayW}px; height:{displayH}px;">
+      <img {src} alt={title} width={displayW} height={displayH} />
     </div>
-    <div class="col w-2/3" bind:clientWidth={w}>
-      {#if maxW}
-        <div class="self-end" style="width: {maxW}px">
-          <img {src} {alt} />
-        </div>
-      {/if}
+    <div class="flex justify-center" style="min-width: 300px;">
+      <ArtInfo artwork={art} />
     </div>
-  </div>
+  {/if}
+
 </section>

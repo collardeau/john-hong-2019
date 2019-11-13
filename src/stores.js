@@ -61,10 +61,18 @@ export const images = derived(
     Object.keys($artStore).forEach(key => {
       const art = $artStore[key];
       const reqW = getImgWidth($maxWidth, art);
-      const transform = reqW >= art.imgW ? "" : `w_${reqW},`;
-      if (local) return (all[key] = { url: art.img, w: reqW, transform });
-      const url = `${cloudinary}${transform}f_auto/${home}/${art.img}`;
-      all[key] = { url, w: reqW, transform };
+      const { imgH, imgW } = art;
+      const imgRatio = imgH / imgW;
+      const transform = reqW >= imgW ? "" : `w_${reqW},`;
+      const h = transform ? Math.round(imgRatio * reqW) : imgH;
+      const cloud = `${cloudinary}${transform}f_auto/${home}/${art.img}`;
+      all[key] = {
+        w: reqW,
+        h,
+        transform,
+        imgRatio,
+        url: local ? art.img : cloud
+      };
     });
     return all;
   }
