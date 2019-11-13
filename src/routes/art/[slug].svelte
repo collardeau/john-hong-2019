@@ -15,10 +15,13 @@
   import Wrapper from "../../components/TransitionWrapper.svelte";
   import Art from "../../components/Art.svelte";
   import Nav from "./_nav.svelte";
+  import { artStore } from "../../stores";
   export let data;
   let show = false;
   $: artwork = data.post;
   $: show = !!data.post;
+
+  $: artStore.merge([artwork]);
   const hide = () => (show = false);
 </script>
 

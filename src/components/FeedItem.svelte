@@ -1,21 +1,23 @@
 <script>
   import ChevronRight from "./svgs/ChevronRight.svelte";
-  import { getHref } from "../utils/imgUtils";
+  import { images } from "../stores";
   import { outline } from "../theme";
-
   export let item = {};
   export let lazy = false;
-  const { img, imgW, imgH } = item;
-  const href = getHref(img, imgW);
 
-  let src = lazy && "IntersectionObserver" in window ? "" : href;
-  let w;
-  // give initial height (based on image size) for lazy loading
-  $: h = !w ? 0 : Math.round((imgH / imgW) * w);
+  const { img, imgW, imgH } = item;
+  $: imgRatio = imgH / imgW;
+
+  $: image = $images[item.slug];
+  $: src = lazy && "IntersectionObserver" in window ? "" : image.url;
+
+  // initial height (based on image size) for lazy loading
+  let w = 0;
+  $: h = Math.round(imgRatio * w);
 
   const onIntersect = entries => {
     entries.forEach(e => {
-      if (!src && e.isIntersecting) src = href;
+      if (!src && e.isIntersecting) src = image.url;
     });
   };
 
@@ -29,9 +31,13 @@
   }
 </script>
 
-<article bind:clientWidth={w} use:lazyImg>
+<article
+  bind:clientWidth={w}
+  use:lazyImg
+  style="max-width: {image.w}px;"
+  class="mx-auto">
   {#if h}
-    <div style="height: {h}px;">
+    <div style="height: {h > imgH ? imgH : h}px; width=">
       <img {src} alt={item.slug} />
     </div>
   {/if}

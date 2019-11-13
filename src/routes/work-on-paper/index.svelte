@@ -11,7 +11,9 @@
 <script>
   import Wrapper from "../../components/TransitionWrapper.svelte";
   import Feed from "../../components/Feed.svelte";
+  import { artStore } from "../../stores";
   export let posts;
+  artStore.merge(posts);
   let title = "work on paper";
 </script>
 

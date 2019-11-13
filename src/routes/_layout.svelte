@@ -1,10 +1,10 @@
 <script>
-  import { setMaxWidth } from "../utils/imgUtils";
   import Header from "../components/Header.svelte";
+  import { maxWidth } from "../stores";
   export let segment;
 
   let containerW;
-  $: containerW && setMaxWidth(containerW); // max size for img reqs
+  $: maxWidth.change(containerW);
 </script>
 
 <style>

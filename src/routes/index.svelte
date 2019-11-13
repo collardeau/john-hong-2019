@@ -1,6 +1,7 @@
 <script>
   import Wrapper from "../components/TransitionWrapper.svelte";
   import SeriesCover from "../components/SeriesCover.svelte";
+  import { artStore } from "../stores";
   const series = [
     {
       title: "new work",
@@ -36,6 +37,8 @@
       imgH: 1100
     }
   ];
+
+  artStore.merge(series);
 </script>
 
 <svelte:head>

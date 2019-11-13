@@ -1,21 +1,3 @@
-const home = "https://john-hong-studio.com";
-
-export let getHref = () => {};
-
-let useLocal = false;
-
-const setCloudinary = (maxW = 1200) => (img = "", imgW = 400) => {
-  if (useLocal) return img;
-  const w = maxW > imgW ? "" : `w_${maxW},`;
-  const href = `https://res.cloudinary.com/dqnk3lc1i/image/fetch/${w}f_auto/${home}/${img}`;
-  // console.log(href);
-  return href;
-};
-
-export const setMaxWidth = (pxs = 1200) => {
-  getHref = setCloudinary(pxs);
-};
-
 export function calcMaxW(img, h, w) {
   if (!img || !h || !w) return 0;
   const { imgH, imgW } = img;

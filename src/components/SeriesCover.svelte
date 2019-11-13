@@ -1,15 +1,16 @@
 <script>
   import { outline } from "../theme";
-  import { getHref } from "../utils/imgUtils";
+  import { images } from "../stores";
   export let title = "series";
   export let href = "";
   export let img = "";
   export let imgW = 0;
+  export let imgH = 0;
+  export let slug = "";
   export let alt = "cover image";
 
-  const src = getHref(img, imgW);
-
-  $: misc = title === "miscellaneous";
+  const image = $images[slug];
+  const src = image.url;
 </script>
 
 <style>
@@ -20,11 +21,6 @@
     background-color: hsla(220, 26%, 14%, 0.5);
     height: 33%;
   }
-  /* @media (min-width: 768px) {
-    a {
-      height: 36vh;
-    }
-  } */
   @media (min-width: 1024px) {
     a {
       height: 60%;
@@ -36,13 +32,10 @@
   .dark-bg {
     background-color: hsla(220, 26%, 14%, 0.95);
   }
-  .misc {
-    object-position: center 52%;
-  }
 </style>
 
 <a {href} class="block relative {outline}">
-  <img {src} {alt} class:misc class="cover" />
+  <img {src} {alt} class="cover" />
   <div class="bg absolute w-full bottom-0">
     <div class="reverse -mt-4 pl-6">
       <span class="py-2 px-4 mr-8 dark-bg series-title">{title}</span>
