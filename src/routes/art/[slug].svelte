@@ -11,18 +11,33 @@
 </script>
 
 <script>
+  import { beforeUpdate, afterUpdate } from "svelte";
   import { fade } from "svelte/transition";
   import Wrapper from "../../components/TransitionWrapper.svelte";
   import Art from "../../components/Art.svelte";
   import Nav from "./_nav.svelte";
   import { artStore } from "../../stores";
   export let data;
-  let show = false;
   $: art = data.post;
-  $: show = !!data.post;
-
   $: artStore.merge([art]);
-  const hide = () => (show = false);
+  $: slug = art.slug;
+  let lastSlug = "";
+  let fadeOut = 100;
+  let fadeIn = 200;
+  let show = true;
+  beforeUpdate(() => {
+    if (lastSlug !== slug) {
+      show = false;
+    }
+  });
+  afterUpdate(() => {
+    if (lastSlug !== slug) {
+      lastSlug = slug;
+      setTimeout(() => {
+        show = true;
+      }, fadeOut + 25);
+    }
+  });
 </script>
 
 <svelte:head>
@@ -32,8 +47,8 @@
 <Wrapper>
   {#if show}
     <div
-      in:fade={{ duration: 400, delay: 100 }}
-      out:fade={{ duration: 100 }}
+      out:fade={{ duration: fadeOut }}
+      in:fade={{ delay: 100, duration: fadeIn }}
       class="col flex-1 mx-2 mb-12 lg:mb-16">
       <Art {art} />
     </div>
@@ -41,5 +56,5 @@
 </Wrapper>
 
 <div class="flex fixed bottom-0 left-0 w-full h-12 lg:h-16">
-  <Nav {hide} next={data.next} prev={data.prev} />
+  <Nav next={data.next} prev={data.prev} />
 </div>

@@ -2,7 +2,6 @@
   import NextSVG from "../../components/svgs/Next.svelte";
   import PrevSVG from "../../components/svgs/Prev.svelte";
   import { outline } from "../../theme";
-  export let hide;
   export let prev;
   export let next;
 
@@ -26,7 +25,6 @@
     <div class="h-10 w-10 lg:h-14 lg:md-14">
       <a
         {href}
-        on:click={hide}
         rel="prefetch"
         class="block p-2 text-gray-500 hover:text-white {outline}">
         {#if !i}
