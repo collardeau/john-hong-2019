@@ -5,9 +5,9 @@ const posts = [
     height: 30,
     width: 48,
     materials: "mixed media on canvas",
-    img: "artwork/empress.jpg",
-    imgH: 641,
-    imgW: 1024,
+    img: "art/empress.jpg",
+    imgH: 532,
+    imgW: 850,
     group: "mixed"
   },
   {
@@ -27,9 +27,9 @@ const posts = [
     height: 42,
     width: 64,
     materials: "mixed media on canvas",
-    img: "artwork/the-bridge.jpg",
-    imgH: 671,
-    imgW: 1024,
+    img: "art/the-bridge.jpg",
+    imgH: 557,
+    imgW: 850,
     group: "mixed"
   },
 
@@ -39,9 +39,9 @@ const posts = [
     height: 40,
     width: 40,
     materials: "mixed media on canvas",
-    img: "artwork/mark-at-the-gate.jpg",
-    imgH: 1032,
-    imgW: 1024,
+    img: "art/mark-at-the-gate.jpg",
+    imgH: 850,
+    imgW: 843,
     group: "mixed"
   },
   {
@@ -61,9 +61,9 @@ const posts = [
     height: 28,
     width: 44,
     materials: "mixed media on canvas",
-    imgH: 651,
-    imgW: 1024,
-    img: "artwork/neo.jpg",
+    imgH: 540,
+    imgW: 850,
+    img: "art/neo.jpg",
     group: "mixed"
   },
   // {
@@ -72,7 +72,7 @@ const posts = [
   //   height: 38,
   //   width: 38,
   //   materials: "mixed media on canvas",
-  //   img: "artwork/all-the-tea-in-china.jpg",
+  //   img: "art/all-the-tea-in-china.jpg",
   //   imgH: ,
   //   imgW: ,
   //   group: "mixed"
@@ -83,9 +83,9 @@ const posts = [
     height: 42,
     width: 42,
     materials: "mixed media on canvas",
-    img: "artwork/riff.jpg",
-    imgH: 960,
-    imgW: 976,
+    img: "art/riff.jpg",
+    imgH: 850,
+    imgW: 864,
     group: "mixed"
   },
   {
@@ -94,9 +94,9 @@ const posts = [
     height: 40,
     width: 40,
     materials: "mixed media on canvas",
-    img: "artwork/mimic.jpg",
-    imgH: 1024,
-    imgW: 1024,
+    img: "art/mimic.jpg",
+    imgH: 850,
+    imgW: 850,
     group: "mixed"
   },
   {
@@ -105,7 +105,7 @@ const posts = [
     height: 28,
     width: 70,
     materials: "mixed media on panel",
-    img: "artwork/backstage.jpg",
+    img: "art/backstage.jpg",
     imgH: 332,
     imgW: 1024,
     group: "mixed"
@@ -195,9 +195,9 @@ const posts = [
     height: 30,
     width: 22,
     materials: "synthetic polymer on paper",
-    img: "artwork/the-light-for-grace.jpg",
-    imgH: 1280,
-    imgW: 954,
+    img: "art/the-light-for-grace.jpg",
+    imgH: 850,
+    imgW: 634,
     group: "paper"
   },
   // {
@@ -207,7 +207,7 @@ const posts = [
   //   width: 22,
   //   each: true,
   //   materials: "synthetic polymer on paper. diptych",
-  //   img: "artwork/sadie.jpg",
+  //   img: "art/sadie.jpg",
   //   imgH:,
   //   imgW:,
   //   group: "paper"
@@ -255,7 +255,7 @@ const posts = [
   //   width: 22,
   //   each: true,
   //   materials: "synthetic polymer on paper. diptych",
-  //   img: "artwork/another-times.jpg",
+  //   img: "art/another-times.jpg",
   //   imgH:,
   //   imgW:,
   //   group: "paper"
@@ -301,9 +301,9 @@ const posts = [
     height: 0,
     width: 0,
     materials: "ink on paper",
-    img: "artwork/dance-10.jpg",
-    imgH: 1280,
-    imgW: 960,
+    img: "art/dance-10.jpg",
+    imgH: 850,
+    imgW: 638,
     group: "misc"
   },
   {
@@ -312,9 +312,9 @@ const posts = [
     height: 0,
     width: 0,
     materials: "ink on paper",
-    img: "artwork/dance-11.jpg",
-    imgH: 1280,
-    imgW: 960,
+    img: "art/dance-11.jpg",
+    imgH: 850,
+    imgW: 638,
     group: "misc"
   },
 
@@ -324,9 +324,9 @@ const posts = [
     height: 0,
     width: 0,
     materials: "ink on paper",
-    img: "artwork/dance-13.jpg",
-    imgH: 1106,
-    imgW: 1125,
+    img: "art/dance-13.jpg",
+    imgH: 787,
+    imgW: 800,
     group: "misc"
   },
   {
@@ -335,9 +335,9 @@ const posts = [
     height: 0,
     width: 0,
     materials: "ink on paper",
-    img: "artwork/dance-12.jpg",
-    imgH: 1280,
-    imgW: 960,
+    img: "art/dance-12.jpg",
+    imgH: 850,
+    imgW: 638,
     group: "misc"
   },
   {
@@ -346,31 +346,20 @@ const posts = [
     height: 0,
     width: 0,
     materials: "ink on paper",
-    img: "artwork/dance-14.jpg",
-    imgH: 1280,
-    imgW: 966,
+    img: "art/dance-14.jpg",
+    imgH: 850,
+    imgW: 641,
     group: "misc"
   },
-  // {
-  //   title: "Dance 2",
-  //   slug: "dance-2",
-  //   height: 12,
-  //   width: 9,
-  //   materials: "ink on paper",
-  //   img: "artwork/dance-2.jpg",
-  //   imgH: 1371,
-  //   imgW: 1024,
-  //   group: "misc"
-  // },
   {
     title: "Dance 3",
     slug: "dance-3",
     height: 12,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/dance-3.jpg",
-    imgH: 1367,
-    imgW: 1024,
+    img: "art/dance-3.jpg",
+    imgH: 850,
+    imgW: 637,
     group: "misc"
   },
   {
@@ -379,9 +368,9 @@ const posts = [
     height: 14,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/dance-4.jpg",
-    imgH: 1575,
-    imgW: 1024,
+    img: "art/dance-4.jpg",
+    imgH: 850,
+    imgW: 553,
     group: "misc"
   },
   {
@@ -390,9 +379,9 @@ const posts = [
     height: 12,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/dance-5.jpg",
-    imgH: 1387,
-    imgW: 1024,
+    img: "art/dance-5.jpg",
+    imgH: 850,
+    imgW: 628,
     group: "misc"
   },
   {
@@ -401,9 +390,9 @@ const posts = [
     height: 12,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/dance-6.jpg",
-    imgH: 1368,
-    imgW: 1024,
+    img: "art/dance-6.jpg",
+    imgH: 850,
+    imgW: 636,
     group: "misc"
   },
   {
@@ -412,9 +401,9 @@ const posts = [
     height: 14,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/dance-7.jpg",
-    imgH: 1579,
-    imgW: 1024,
+    img: "art/dance-7.jpg",
+    imgH: 850,
+    imgW: 551,
     group: "misc"
   },
   {
@@ -423,9 +412,9 @@ const posts = [
     height: 15,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/dance-8.jpg",
-    imgH: 1653,
-    imgW: 1024,
+    img: "art/dance-8.jpg",
+    imgH: 850,
+    imgW: 527,
     group: "misc"
   },
   {
@@ -434,9 +423,9 @@ const posts = [
     height: 12,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/dance-9.jpg",
-    imgH: 1383,
-    imgW: 1024,
+    img: "art/dance-9.jpg",
+    imgH: 850,
+    imgW: 629,
     group: "misc"
   },
 
@@ -457,9 +446,9 @@ const posts = [
     height: 14,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/untitled-5.jpg",
-    imgH: 1616,
-    imgW: 1024,
+    img: "art/untitled-5.jpg",
+    imgH: 850,
+    imgW: 539,
     group: "misc"
   },
   {
@@ -468,9 +457,9 @@ const posts = [
     height: 12,
     width: 9,
     materials: "ink on paper",
-    img: "artwork/untitled-6.jpg",
-    imgH: 1369,
-    imgW: 1024,
+    img: "art/untitled-6.jpg",
+    imgH: 850,
+    imgW: 636,
     group: "misc"
   },
   {
@@ -490,246 +479,245 @@ const posts = [
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/kitchen-2.jpg",
-    imgH: 960,
-    imgW: 1280,
+    img: "art/kitchen-2.jpg",
+    imgH: 638,
+    imgW: 850,
     group: "misc"
   },
 
   // NEW WORK
   {
-    title: "New Work 14",
-    slug: "new-work-14",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-14.jpg",
-    imgH: 1179,
-    imgW: 958,
-    group: "recent"
-  },
-  {
-    title: "New Work 13",
-    slug: "new-work-13",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-13.jpg",
-    imgH: 1179,
-    imgW: 958,
-    group: "recent"
-  },
-  {
-    title: "New Work 15",
-    slug: "new-work-15",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-15.jpg",
-    imgH: 1197,
-    imgW: 974,
-    group: "recent"
-  },
-  {
-    title: "New Work 21",
-    slug: "new-work-21",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-21.jpg",
-    imgH: 1197,
-    imgW: 974,
-    group: "recent"
-  },
-  {
-    title: "New Work 12",
-    slug: "new-work-12",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-12.jpg",
-    imgH: 1205,
-    imgW: 993,
-    group: "recent"
-  },
-  {
-    title: "New Work 7",
-    slug: "new-work-7",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-07.jpg",
-    imgH: 1196,
-    imgW: 894,
-    group: "recent"
-  },
-  {
-    title: "New Work 3",
-    slug: "new-work-3",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-03.jpg",
-    imgH: 1185,
-    imgW: 976,
-    group: "recent"
-  },
-  {
-    title: "New Work 8",
-    slug: "new-work-8",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-08.jpg",
-    imgH: 1202,
-    imgW: 903,
-    group: "recent"
-  },
-  {
-    title: "New Work 18",
-    slug: "new-work-18",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-18.jpg",
-    imgH: 1200,
-    imgW: 990,
-    group: "recent"
-  },
-  {
-    title: "New Work 2",
-    slug: "new-work-2",
-    height: 0,
-    width: 0,
-    materials: "",
-    img: "artwork/new-work-02.jpg",
-    imgH: 1201,
-    imgW: 923,
-    group: "recent"
-  },
-  {
-    title: "New Work 1",
+    title: "New Work 1", // old 14
     slug: "new-work-1",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-01.jpg",
-    imgH: 1186,
-    imgW: 968,
+    img: "art/new-work-1.jpg",
+    imgH: 850,
+    imgW: 691,
     group: "recent"
   },
-
   {
-    title: "New Work 4",
+    title: "New Work 2", // old 13
+    slug: "new-work-2",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-2.jpg",
+    imgH: 850,
+    imgW: 691,
+    group: "recent"
+  },
+  {
+    title: "New Work 3", // old 15
+    slug: "new-work-3",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-3.jpg",
+    imgH: 850,
+    imgW: 692,
+    group: "recent"
+  },
+  {
+    title: "New Work 4", // old 21
     slug: "new-work-4",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-04.jpg",
-    imgH: 1187,
-    imgW: 969,
+    img: "art/new-work-4.jpg",
+    imgH: 850,
+    imgW: 692,
     group: "recent"
   },
   {
-    title: "New Work 5",
+    title: "New Work 5", // old 12
     slug: "new-work-5",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-05.jpg",
-    imgH: 1210,
-    imgW: 997,
+    img: "art/new-work-5.jpg",
+    imgH: 850,
+    imgW: 700,
     group: "recent"
   },
   {
-    title: "New Work 6",
+    title: "New Work 6", // old 7
     slug: "new-work-6",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-06.jpg",
-    imgH: 1180,
-    imgW: 965,
+    img: "art/new-work-6.jpg",
+    imgH: 850,
+    imgW: 635,
     group: "recent"
   },
-
   {
-    title: "New Work 9",
+    title: "New Work 7", // old 3
+    slug: "new-work-7",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-7.jpg",
+    imgH: 850,
+    imgW: 700,
+    group: "recent"
+  },
+  {
+    title: "New Work 8", // old 8
+    slug: "new-work-8",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-8.jpg",
+    imgH: 850,
+    imgW: 639,
+    group: "recent"
+  },
+  {
+    title: "New Work 9", // old 18
     slug: "new-work-9",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-09.jpg",
-    imgH: 1196,
-    imgW: 982,
+    img: "art/new-work-9.jpg",
+    imgH: 850,
+    imgW: 701,
     group: "recent"
   },
   {
-    title: "New Work 10",
+    title: "New Work 10", // old 2
     slug: "new-work-10",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-10.jpg",
-    imgH: 1188,
-    imgW: 975,
+    img: "art/new-work-10.jpg",
+    imgH: 850,
+    imgW: 653,
     group: "recent"
   },
   {
-    title: "New Work 11",
+    title: "New Work 11", // old 1
     slug: "new-work-11",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-11.jpg",
-    imgH: 1208,
-    imgW: 987,
+    img: "art/new-work-11.jpg",
+    imgH: 850,
+    imgW: 694,
     group: "recent"
   },
 
   {
-    title: "New Work 16",
+    title: "New Work 12", // old 4
+    slug: "new-work-12",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-12.jpg",
+    imgH: 850,
+    imgW: 694,
+    group: "recent"
+  },
+  {
+    title: "New Work 13", // old 5
+    slug: "new-work-13",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-13.jpg",
+    imgH: 850,
+    imgW: 700,
+    group: "recent"
+  },
+  {
+    title: "New Work 14", // old 6
+    slug: "new-work-14",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-14.jpg",
+    imgH: 850,
+    imgW: 695,
+    group: "recent"
+  },
+
+  {
+    title: "New Work 15", // old 9
+    slug: "new-work-15",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-15.jpg",
+    imgH: 850,
+    imgW: 698,
+    group: "recent"
+  },
+  {
+    title: "New Work 16", // old 10
     slug: "new-work-16",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-16.jpg",
-    imgH: 1156,
-    imgW: 952,
+    img: "art/new-work-16.jpg",
+    imgH: 850,
+    imgW: 698,
     group: "recent"
   },
   {
-    title: "New Work 17",
+    title: "New Work 17", // old 11
     slug: "new-work-17",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-17.jpg",
-    imgH: 1193,
-    imgW: 982,
+    img: "art/new-work-17.jpg",
+    imgH: 850,
+    imgW: 694,
     group: "recent"
   },
-
   {
-    title: "New Work 19",
+    title: "New Work 18", // old 16
+    slug: "new-work-18",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-18.jpg",
+    imgH: 850,
+    imgW: 700,
+    group: "recent"
+  },
+  {
+    title: "New Work 19", // old 17
     slug: "new-work-19",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-19.jpg",
-    imgH: 1185,
-    imgW: 971,
+    img: "art/new-work-19.jpg",
+    imgH: 850,
+    imgW: 700,
     group: "recent"
   },
+
   {
-    title: "New Work 20",
+    title: "New Work 20", // old 19
     slug: "new-work-20",
     height: 0,
     width: 0,
     materials: "",
-    img: "artwork/new-work-20.jpg",
-    imgH: 1190,
-    imgW: 969,
+    img: "art/new-work-20.jpg",
+    imgH: 850,
+    imgW: 696,
+    group: "recent"
+  },
+  {
+    title: "New Work 21", // old 20
+    slug: "new-work-21",
+    height: 0,
+    width: 0,
+    materials: "",
+    img: "art/new-work-21.jpg",
+    imgH: 850,
+    imgW: 692,
     group: "recent"
   }
 ];

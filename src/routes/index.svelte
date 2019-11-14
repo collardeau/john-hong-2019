@@ -6,35 +6,35 @@
     {
       title: "new work",
       href: "new-work",
-      img: "artwork/new-work-14.jpg",
-      slug: "new-work-14",
-      imgW: 958,
-      imgH: 1179
+      img: "art/new-work-1.jpg",
+      slug: "new-work-1",
+      imgW: 695,
+      imgH: 850
     },
     {
       title: "work on paper",
       href: "work-on-paper",
-      img: "artwork/the-light-for-grace.jpg",
+      img: "art/the-light-for-grace.jpg",
       slug: "the-light-for-grace",
-      imgW: 954,
-      imgH: 1280
+      imgW: 634,
+      imgH: 850
     },
     {
       title: "mixed media",
       href: "mixed-media",
-      img: "artwork/mark-at-the-gate.jpg",
+      img: "art/mark-at-the-gate.jpg",
       slug: "mark-at-the-gate",
-      imgW: 1032,
-      imgH: 1024
+      imgW: 843,
+      imgH: 850
     },
 
     {
       title: "miscellaneous",
       href: "miscellaneous",
-      img: "artwork/dance-12.jpg",
+      img: "art/dance-12.jpg",
       slug: "dance-12",
-      imgW: 843,
-      imgH: 1100
+      imgW: 638,
+      imgH: 850
     }
   ];
 
