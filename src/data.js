@@ -478,7 +478,7 @@ const posts = [
     slug: "kitchen",
     height: 0,
     width: 0,
-    materials: "",
+    materials: "home design",
     img: "art/kitchen-2.jpg",
     imgH: 638,
     imgW: 850,

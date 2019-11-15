@@ -23,7 +23,7 @@
   $: slug = art.slug;
   let lastSlug = "";
   let fadeOut = 100;
-  let fadeIn = 200;
+  let fadeIn = 250;
   let show = true;
   beforeUpdate(() => {
     if (lastSlug !== slug) {

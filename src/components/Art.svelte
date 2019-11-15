@@ -23,7 +23,7 @@
   }
   .vertical {
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   .horizontal .top-heading {
     display: none;
@@ -31,27 +31,32 @@
   .vertical .grouped-heading {
     display: none;
   }
+  .horizontal .info {
+    order: -1;
+  }
 </style>
 
 <section
-  class="flex-1 w-full flex items-center my-0 md:my-4 mb-8 md:mb-16"
+  class="flex-1 w-full flex items-center my-0 md:my-4 mb-6 md:mb-12"
   class:horizontal
   class:vertical
   bind:clientWidth={containerW}
   bind:clientHeight={containerH}>
   {#if containerH && containerW}
     <h3
-      class="top-heading py-3 text-center my uppercase tracking-wider text-xl
-      md:text-2xl ">
+      class="top-heading py-2 px-2 mb-4 mt-3 text-center my uppercase
+      tracking-wider text-xl lg:text-2xl border-b border-gray-800">
       {art.title}
     </h3>
     <div style="with:{displayW}px; height:{displayH}px;">
       <img {src} alt={title} width={displayW} height={displayH} />
     </div>
-    <div class="flex justify-center py-5" style="min-width: 300px;">
-      <div class="col text-center">
+    <div class="info flex justify-center pt-4 pb-2" style="min-width:300px;">
+      <div class="col text-center border-1">
         <section class="col">
-          <h3 class="grouped-heading mb-2 uppercase tracking-wider md:text-xl">
+          <h3
+            class="grouped-heading mx-auto pb-1 px-1 mb-3 uppercase
+            tracking-wider text-xl lg:text-2xl border-b border-gray-800">
             {art.title}
           </h3>
           <div class="text-gray-500 text-sm md:text-base">
