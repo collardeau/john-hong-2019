@@ -51,8 +51,8 @@
       <div class="lg:hidden max-w-xl mx-auto mb-2">
         <SeriesCover {...serie} />
       </div>
-      <div class="hidden lg:flex mb-24 bo">
-        <div class="col mx-3 justify-center">
+      <div class="hidden lg:flex mb-20 w-full">
+        <div class="col mx-3 justify-center w-1/4">
           <SeriesCover {...serie} />
         </div>
       </div>
