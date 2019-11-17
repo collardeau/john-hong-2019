@@ -1,77 +1,112 @@
 <script>
+  import { onMount } from "svelte";
   import { images } from "../stores";
-  import { calcMaxW } from "../utils/imgUtils";
+  import { calcMaxW, remToPxs } from "../utils/imgUtils";
   export let art;
 
-  let containerW, containerH;
+  let windowH, windowW, w, h, viewH, imageH, imageW, imageWrapperH;
+
+  let headerNode, imageNode, navNode;
+  onMount(() => {
+    headerNode = document.getElementsByTagName("header")[0];
+    imageNode = document.getElementsByClassName("image-wrapper")[0];
+    navNode = document.getElementsByClassName("art-nav")[0];
+  });
+
   $: title = art.title;
   $: image = $images[art.slug];
   $: src = image.url;
-  $: displayW = calcMaxW(art, containerH, containerW);
-  $: displayH = Math.round(displayW * image.imgRatio);
-  $: deltaH = containerH - displayH;
-  $: enoughVerticalSpace = deltaH > 150;
-  $: horizontal = containerW > 768 && !enoughVerticalSpace;
-  $: vertical = !horizontal;
+  $: imageW = calcMaxW(art, h, w);
+  $: imageH = Math.round(imageW * image.imgRatio);
+
+  $: viewH =
+    windowH &&
+    windowH -
+      navNode.getBoundingClientRect().height -
+      headerNode.getBoundingClientRect().height;
+  const infoH = remToPxs(8);
+  $: enoughVerticalSpace = !imageWrapperH
+    ? true
+    : imageWrapperH + infoH + 10 < viewH;
+  $: horizontal = windowW > 768 && !enoughVerticalSpace;
+
+  // $: console.log({ windowW, w, enoughVerticalSpace, horizontal });
+  const dimensions = `${art.each ? "each " : ""}${art.width} x ${art.height}`;
 </script>
 
 <style>
-  .horizontal {
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
-  }
-  .vertical {
+  .container {
+    /* border: 1px solid red; */
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
-  .horizontal .top-heading {
-    display: none;
+  .container.horizontal {
+    max-width: none;
+    flex-direction: row;
   }
-  .vertical .grouped-heading {
-    display: none;
+  .info {
+    display: flex;
+    height: 8rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
-  .horizontal .info {
-    order: -1;
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7;
+  }
+  .gutter {
+    margin-top: 0.5rem;
+  }
+
+  .horizontal div:first-child {
+    order: 2;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+    }
   }
 </style>
 
-<section
-  class="flex-1 w-full flex items-center my-0 md:my-4 mb-6 md:mb-12"
-  class:horizontal
-  class:vertical
-  bind:clientWidth={containerW}
-  bind:clientHeight={containerH}>
-  {#if containerH && containerW}
-    <h3
-      class="top-heading py-2 px-2 mb-4 mt-3 text-center my uppercase
-      tracking-wider text-xl lg:text-2xl border-b border-gray-800">
-      {art.title}
-    </h3>
-    <div style="with:{displayW}px; height:{displayH}px;">
-      <img {src} alt={title} width={displayW} height={displayH} />
-    </div>
-    <div class="info flex justify-center pt-4 pb-2" style="min-width:300px;">
-      <div class="col text-center border-1">
-        <section class="col">
-          <h3
-            class="grouped-heading mx-auto pb-1 px-1 mb-3 uppercase
-            tracking-wider text-xl lg:text-2xl border-b border-gray-800">
-            {art.title}
-          </h3>
-          <div class="text-gray-500 text-sm md:text-base">
-            {#if art.materials}
-              <p class="capitalize">{art.materials}</p>
-            {/if}
-            {#if art.width}
-              <p class="mt-1">
-                {art.each ? 'each ' : ''}{art.width} x {art.height} inches
-              </p>
-            {/if}
-          </div>
-        </section>
-      </div>
-    </div>
-  {/if}
+<svelte:window bind:innerHeight={windowH} bind:innerWidth={windowW} />
 
-</section>
+<div
+  class="container"
+  class:horizontal
+  bind:clientWidth={w}
+  bind:clientHeight={h}>
+  <div class="image-wrapper" bind:clientHeight={imageWrapperH}>
+    <img {src} alt={title} width={imageW} height={imageH} />
+  </div>
+  <section class="info">
+    <h3>{art.title}</h3>
+    <div class="details text-gray-500 text-sm md:text-base">
+      <span class="">{art.materials}</span>
+      {#if art.width}
+        <span class="">{dimensions} inches</span>
+      {/if}
+    </div>
+  </section>
+</div>

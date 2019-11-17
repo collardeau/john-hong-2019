@@ -12,6 +12,9 @@
     font-family: futura, arial, sans-serif;
     background-color: #1a202c;
   }
+  :global(html) {
+    font-size: 16px;
+  }
 </style>
 
 <div class="col min-h-screen antialiased text-gray-300">

@@ -25,3 +25,7 @@ export function calcMaxW(img = { imgH: 0, imgW: 0 }, h, w) {
     return w > 1024 ? 1024 : w;
   }
 }
+
+export function remToPxs(rem) {
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}

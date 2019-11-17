@@ -20,7 +20,7 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<nav class="bg-gray-800 flex justify-around items-center flex-1">
+<nav class="art-nav bg-gray-800 flex justify-around items-center flex-1">
   {#each [prevHref, nextHref] as href, i}
     <div class="h-10 w-10 lg:h-14 lg:md-14">
       <a
