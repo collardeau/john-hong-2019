@@ -70,7 +70,10 @@
     <p>{statement}</p>
     <h3 class="font-semibold text-lg text-white mt-4">About John Hong</h3>
     <p>{aboutArtist}</p>
-    <img src="img/peanuts.jpg" class="w-3/4 my-6" alt="artist sketch" />
+    <img
+      src="img/peanuts.jpg"
+      class="w-3/4 my-6 ml-2 lg:ml-0"
+      alt="artist sketch" />
     <h3 class="font-semibold text-lg text-white mt-4">Achievements</h3>
     <ul>
       {#each achievements as { year, degree, institution, city }}

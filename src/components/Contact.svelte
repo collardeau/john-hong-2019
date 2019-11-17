@@ -82,7 +82,7 @@
       id="message"
       placeholder="your message here" />
   </div>
-  <div class="mt-4 lg:mt-5">
+  <div class="mt-4 lg:mt-5 pb-4">
     <button
       {disabled}
       class="{outline} w-full py-2 lg:py-3 rounded {disabled ? disabledBtn : enabledBtn}"
