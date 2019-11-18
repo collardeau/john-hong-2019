@@ -13,7 +13,7 @@
   $: viewH = windowH && windowH - $artNavH - $headerH;
 
   const infoH = remToPxs(8);
-  $: enoughVerticalSpace = imageWrapperH + infoH + altTitleH + 100 < viewH;
+  $: enoughVerticalSpace = imageWrapperH + infoH + altTitleH + 120 < viewH;
   $: largeScreen = windowW > 768;
   $: horizontal = largeScreen && !enoughVerticalSpace;
   $: altTitle = largeScreen & !horizontal;
