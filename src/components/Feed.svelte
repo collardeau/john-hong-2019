@@ -24,7 +24,7 @@
 
     <div class="hidden md:flex max-w-5xl mx-auto">
       {#each cols as c}
-        <div class="w-1/2 px-3">
+        <div class="w-1/2 px-2">
           {#each c.slice(0, 3) as item, i}
             <div class:mt-4={i}>
               <FeedItem {item} />

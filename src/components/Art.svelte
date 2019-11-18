@@ -96,7 +96,7 @@
   <div class="info">
     <h3
       style="display: {!altTitle ? 'block' : 'none'};"
-      class="border-b border-gray-800">
+      class="border-b-2 border-gray-800">
       {art.title}
     </h3>
     <div class="details text-gray-500">

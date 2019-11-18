@@ -9,7 +9,7 @@
 
 <style>
   :global(body) {
-    font-family: futura, arial, sans-serif;
+    font-family: "Futura", arial, sans-serif;
     background-color: #1a202c;
   }
   :global(html) {
