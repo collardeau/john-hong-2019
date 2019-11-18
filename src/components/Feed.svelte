@@ -6,7 +6,7 @@
   $: cols = makeCols(posts, title);
 </script>
 
-<section class="mb-5">
+<section class="mb-5 max-w-5xl mx-auto">
   <div class="mx-2 md:mx-0">
     <h3 class="py-4 mx-2 capitalize text-lg">series: {title}</h3>
     <div class="block md:hidden">
@@ -22,7 +22,7 @@
       {/each}
     </div>
 
-    <div class="hidden md:flex max-w-5xl mx-auto">
+    <div class="hidden md:flex">
       {#each cols as c}
         <div class="w-1/2 px-2">
           {#each c.slice(0, 3) as item, i}
