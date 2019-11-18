@@ -1,22 +1,30 @@
 <script>
   import Header from "../components/Header.svelte";
+  import { maxWidth } from "../stores";
   export let segment;
-  $: gutter = segment === "about" ? "mx-0" : "mx-2"; // dynamic class
+
+  let containerW;
+  $: maxWidth.change(containerW);
 </script>
 
 <style>
   :global(body) {
-    font-family: futura;
+    font-family: "Futura", arial, sans-serif;
     background-color: #1a202c;
-    /* background-color: #2d3748; */
-    /* background-color: #4a5568; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #1a202c;
+  }
+  :global(html) {
+    font-size: 16px;
   }
 </style>
 
-<Header {segment} />
-<main class="max-w-xl {gutter} sm:mx-auto">
-  <slot />
-</main>
+<div class="col min-h-screen antialiased text-gray-300">
+  <Header {segment} />
+  <main class="col container mx-auto" bind:clientWidth={containerW}>
+    {#if containerW || segment === 'art'}
+      <slot />
+    {/if}
+  </main>
+</div>
+
+<!-- hidden link for static export -->
+<a href="art" class="hidden">artwork</a>

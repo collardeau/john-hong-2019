@@ -1,33 +1,44 @@
 <script>
   import { outline } from "../theme";
+  import { images } from "../stores";
   export let title = "series";
-  export let src = "";
-  export let href = "#";
+  export let href = "";
+  export let img = "";
+  export let imgW = 0;
+  export let imgH = 0;
+  export let slug = "";
   export let alt = "cover image";
-  $: misc = title === "miscellaneous";
+
+  const image = $images[slug];
+  const src = image.url;
 </script>
 
 <style>
+  a {
+    height: 40vh;
+  }
   .bg {
     background-color: hsla(220, 26%, 14%, 0.5);
     height: 33%;
   }
-  .misc {
-    object-position: center 52%;
+  @media (min-width: 1024px) {
+    a {
+      height: 60%;
+    }
+    .bg {
+      height: 20%;
+    }
+  }
+  .dark-bg {
+    background-color: hsla(220, 26%, 14%, 0.95);
   }
 </style>
 
-<a {href} class="block {outline} mb-3 sm:mb-4 xl:mb-6">
-  <div class="relative h-64">
-    <img {src} {alt} class:misc class="object-cover w-full h-full" />
-    <div class="bg absolute w-full bottom-0">
-      <div class="flex flex-row-reverse -mt-4 pl-6">
-        <span
-          class="bg-gray-900 rounded py-2 px-4 mr-8 text-white font-medium
-          tracking-wider uppercase">
-          {title}
-        </span>
-      </div>
+<a {href} class="block relative {outline}">
+  <img {src} {alt} class="cover" />
+  <div class="bg absolute w-full bottom-0">
+    <div class="reverse -mt-4 pl-6">
+      <span class="py-2 px-4 mr-8 dark-bg series-title">{title}</span>
     </div>
   </div>
 </a>

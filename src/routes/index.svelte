@@ -1,32 +1,44 @@
 <script>
   import Wrapper from "../components/TransitionWrapper.svelte";
   import SeriesCover from "../components/SeriesCover.svelte";
-  import { heading } from "../theme";
-  import { cloudinaryBase } from "../config";
-  let w;
+  import { artStore } from "../stores";
   const series = [
     {
       title: "new work",
       href: "new-work",
-      img: "new-work-14.jpg"
-    },
-    {
-      title: "mixed media",
-      href: "mixed-media",
-      img: "empress.jpg"
+      img: "art/new-work-1.jpg",
+      slug: "new-work-1",
+      imgW: 695,
+      imgH: 850
     },
     {
       title: "work on paper",
       href: "work-on-paper",
-      img: "the-light-for-grace.jpg"
+      img: "art/the-light-for-grace.jpg",
+      slug: "the-light-for-grace",
+      imgW: 634,
+      imgH: 850
+    },
+    {
+      title: "mixed media",
+      href: "mixed-media",
+      img: "art/mark-at-the-gate.jpg",
+      slug: "mark-at-the-gate",
+      imgW: 843,
+      imgH: 850
     },
 
     {
       title: "miscellaneous",
       href: "miscellaneous",
-      img: "dance-10.jpg"
+      img: "art/dance-12.jpg",
+      slug: "dance-12",
+      imgW: 638,
+      imgH: 850
     }
   ];
+
+  artStore.merge(series);
 </script>
 
 <svelte:head>
@@ -34,16 +46,16 @@
 </svelte:head>
 
 <Wrapper>
-  <section class="w-full mt-3">
-    <!-- <h3 class={heading}>View Series</h3> -->
-    <div class="w-full" bind:clientWidth={w}>
-      {#each series as { title, href, img }}
-        <SeriesCover
-          {title}
-          {href}
-          src="{cloudinaryBase({ w })}artwork/{img}" />
-      {/each}
-      }
-    </div>
-  </section>
+  <div class="my-2 px-2 lg:flex flex-1">
+    {#each series as serie}
+      <div class="lg:hidden max-w-xl mx-auto mb-2">
+        <SeriesCover {...serie} />
+      </div>
+      <div class="hidden lg:flex mb-20 w-full">
+        <div class="col mx-3 justify-center w-1/4">
+          <SeriesCover {...serie} />
+        </div>
+      </div>
+    {/each}
+  </div>
 </Wrapper>

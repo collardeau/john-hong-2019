@@ -8,7 +8,7 @@
 </script>
 
 {#if show}
-  <div in:fade={{ duration: 400, delay: 50 }}>
+  <div in:fade={{ duration: 400, delay: 50 }} class="col">
     <slot />
   </div>
 {/if}

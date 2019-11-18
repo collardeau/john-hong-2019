@@ -11,100 +11,50 @@
 </script>
 
 <script>
+  import { beforeUpdate, afterUpdate } from "svelte";
   import { fade } from "svelte/transition";
   import Wrapper from "../../components/TransitionWrapper.svelte";
-  import { cloudinaryBase } from "../../config";
+  import Art from "../../components/Art.svelte";
+  import Nav from "./_nav.svelte";
+  import { artStore } from "../../stores";
   export let data;
-  let show = false;
-  $: post = data.post;
-  $: prev = data.prev;
-  $: next = data.next;
-  $: show = !!data.post;
-
-  const onClick = () => (show = false);
-
-  const outline = "focus:outline-none focus:shadow-outline active:bg-gray-900";
-  let w;
-
-  const handleKeydown = e => {
-    if (e.keyCode === 39) {
-      window.location.href = `/art/${next}`;
+  $: art = data.post;
+  $: artStore.merge([art]);
+  $: slug = art.slug;
+  let lastSlug = "";
+  let fadeOut = 100;
+  let fadeIn = 250;
+  let show = true;
+  beforeUpdate(() => {
+    if (lastSlug !== slug) {
+      show = false;
     }
-    if (e.keyCode === 37) {
-      window.location.href = `/art/${prev}`;
+  });
+  afterUpdate(() => {
+    if (lastSlug !== slug) {
+      lastSlug = slug;
+      setTimeout(() => {
+        show = true;
+      }, fadeOut + 25);
     }
-  };
+  });
 </script>
 
 <svelte:head>
-  <title>{post.title}</title>
+  <title>{art.title}</title>
 </svelte:head>
-
-<svelte:window on:keydown={handleKeydown} />
 
 <Wrapper>
   {#if show}
-    <section
-      class="mt-4 sm:mt-12 pb-20 text-center w-full"
-      in:fade={{ duration: 400, delay: 100 }}
-      out:fade={{ duration: 100 }}>
-      <div bind:clientWidth={w}>
-        <img
-          class=""
-          src="{cloudinaryBase({ w })}{post.img}"
-          alt={post.title} />
-      </div>
-      <div class="pt-2">
-        <h3 class="py-2 text-white uppercase text-lg font-medium">
-          {post.title}
-        </h3>
-        <div class="text-gray-500 text-sm">
-          <p class="capitalize">{post.materials}</p>
-          <p class="">
-            {post.width} x {post.height} in{post.each ? ' each' : ''}
-          </p>
-        </div>
-      </div>
-    </section>
+    <div
+      out:fade={{ duration: fadeOut }}
+      in:fade={{ delay: 100, duration: fadeIn }}
+      class="col flex-1 mx-2 mb-12 lg:mb-16">
+      <Art {art} />
+    </div>
   {/if}
 </Wrapper>
 
-<nav
-  class="text-gray-200 bg-gray-800 py-2 fixed bottom-0 left-0 w-full flex
-  justify-around">
-  <div class="h-10 w-10">
-    <a
-      on:click={onClick}
-      rel="prefetch"
-      href="/art/{prev}"
-      class="block p-2 text-gray-500 hover:text-white {outline}">
-      <svg
-        class="fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20">
-        <path
-          d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0
-          0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76
-          10l.7-.7z" />
-      </svg>
-    </a>
-  </div>
-  <div class="h-10 w-10">
-    <a
-      on:click={onClick}
-      rel="prefetch"
-      href="/art/{next}"
-      class="block p-2 text-gray-500 hover:text-white {outline}">
-      <svg
-        class="fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20">
-        <path
-          d="M10 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM2 10a8 8 0 1 0 16 0 8 8 0
-          0 0-16 0zm10.54.7L9 14.25l-1.41-1.41L10.4 10 7.6 7.17 9 5.76 13.24
-          10l-.7.7z" />
-      </svg>
-
-    </a>
-  </div>
-</nav>
+<div class="flex fixed bottom-0 left-0 w-full h-12 lg:h-16">
+  <Nav next={data.next} prev={data.prev} />
+</div>

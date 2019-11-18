@@ -45,18 +45,11 @@ const postcssPlugins = (purgecss = false) => {
           "focus:outline-none",
           "focus:shadow-outline",
           "active:bg-gray-600",
-          "py-4",
-          "px-2",
-          "sm:px-0",
-          "mx-0",
-          "mx-2",
-          "capitalize",
           "cursor-not-allowed",
           "cursor-pointer",
           "bg-gray-200",
           "bg-gray-800",
           "text-gray-200",
-          "text-gray-300",
           "text-gray-600"
         ]
       }),

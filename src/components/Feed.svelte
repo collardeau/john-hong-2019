@@ -1,50 +1,42 @@
 <script>
-  import { LazyLoadContainer, LazyLoad } from "svelte-lazyload";
-  import Img from "./ImageWrapper.svelte";
-  import { outline, heading } from "../theme";
+  import FeedItem from "./FeedItem.svelte";
+  import { makeCols } from "../utils/postsUtils";
   export let posts = [];
   export let title = "";
-
-  let w;
-  const getHeight = (w, imgH, imgW) => {
-    const ratio = imgH / imgW;
-    return Math.round(ratio * w);
-  };
+  $: cols = makeCols(posts, title);
 </script>
 
-<section class="mb-6">
-  <h3 class={heading}>series: {title}</h3>
-  <LazyLoadContainer>
-    {#each posts as { img, title, slug, imgH, imgW }, i}
-      <LazyLoad id={slug}>
-        <article class:pt-6={i} bind:clientWidth={w}>
-          <Img {w} {img} h={getHeight(w, imgH, imgW)} alt={title} />
-          <section
-            class="bg-gray-800 text-gray-300 p-2 md:p-4 flex justify-between
-            items-center">
-            <h5
-              class="uppercase font-medium tracking-wider text-sm sm:text-base">
-              {title}
-            </h5>
-            <div>
-              <a
-                rel="prefetch"
-                href="art/{slug}"
-                class="text-gray-600 hover:text-white block w-8 h-8 p-1 {outline}">
-                <svg
-                  class="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20">
-                  <path
-                    d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828
-                    10l-4.242 4.243L8 15.657l4.95-4.95z" />
-                </svg>
-              </a>
-            </div>
-          </section>
-        </article>
-      </LazyLoad>
-    {/each}
-  </LazyLoadContainer>
+<section class="mb-5">
+  <div class="mx-2 md:mx-0">
+    <h3 class="py-4 mx-2 capitalize text-lg">series: {title}</h3>
+    <div class="block md:hidden">
+      {#each posts.slice(0, 2) as item, i}
+        <div class:mt-4={i}>
+          <FeedItem {item} />
+        </div>
+      {/each}
+      {#each posts.slice(2) as item, i}
+        <div class="mt-4">
+          <FeedItem {item} lazy={true} />
+        </div>
+      {/each}
+    </div>
 
+    <div class="hidden md:flex max-w-5xl mx-auto">
+      {#each cols as c}
+        <div class="w-1/2 px-2">
+          {#each c.slice(0, 3) as item, i}
+            <div class:mt-4={i}>
+              <FeedItem {item} />
+            </div>
+          {/each}
+          {#each c.slice(3) as item}
+            <div class="mt-4">
+              <FeedItem {item} lazy={true} />
+            </div>
+          {/each}
+        </div>
+      {/each}
+    </div>
+  </div>
 </section>
