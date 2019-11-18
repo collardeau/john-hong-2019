@@ -52,7 +52,7 @@ function getImgWidth(containerW = 0, art = {}) {
 
 const local = false;
 const home = "https://john-hong-studio.com";
-const cloudinary = "https://res.cloudinary.com/dqnk3lc1i/image/fetch/";
+const cloudinary = "https://res.cloudinary.com/diagxuc0q/image/fetch/";
 
 export const images = derived(
   [artStore, maxWidth],
