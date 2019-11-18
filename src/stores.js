@@ -77,3 +77,6 @@ export const images = derived(
     return all;
   }
 );
+
+export const headerH = writable(0);
+export const artNavH = writable(0);

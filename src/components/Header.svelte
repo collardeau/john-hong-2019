@@ -1,8 +1,11 @@
 <script>
   import { slide } from "svelte/transition";
+  import { headerH } from "../stores";
   import { outline } from "../theme";
   export let segment, lastSegment;
 
+  let h;
+  $: h && headerH.set(h);
   let isOpen = false;
   const links = [
     {
@@ -46,7 +49,7 @@
 
 </style>
 
-<header class="bg-gray-800">
+<header class="bg-gray-800" bind:clientHeight={h}>
   <!-- mobile -->
   <div class="relative lg:hidden p-2 items-center">
     <div class="flex justify-between items-center h-full">
