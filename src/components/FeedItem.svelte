@@ -26,8 +26,12 @@
   });
 
   function lazyImg(node) {
-    if (!lazy) return;
-    observer.observe(node);
+    observer && observer.observe(node);
+    return {
+      destroy() {
+        observer && observer.unobserve(node);
+      }
+    };
   }
 </script>
 
